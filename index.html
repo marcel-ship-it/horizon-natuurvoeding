@@ -491,9 +491,10 @@
 
   /* ——— STATS / IMPACT ——— */
   .stats {
-    background: var(--color-blue);
+    background: linear-gradient(180deg, #009cdc 0%, #7ed0f0 100%);
     color: var(--color-cream);
-    padding: var(--s7) 0;
+    padding: var(--s7) var(--s3);
+    margin-top: 0;
   }
   .stats-grid {
     display: grid;
@@ -523,8 +524,9 @@
 
   /* ——— QUOTE / OVER ONS ——— */
   .quote {
-    padding: var(--s8) 0;
-    background: var(--color-cream);
+    padding: var(--s8) var(--s3);
+    background: linear-gradient(180deg, #7ed0f0 0%, var(--color-cream) 15%, var(--color-cream) 100%);
+    margin-top: 0;
   }
   .quote-grid {
     display: grid;
@@ -561,9 +563,10 @@
 
   /* ——— PRODUCT GRID ——— */
   .products {
-    padding: var(--s8) 0;
-    background: var(--color-cream);
-    border-top: 1px solid rgba(0, 58, 92, 0.08);
+    padding: var(--s8) var(--s3);
+    background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-cream) 85%, #e8f7fb 100%);
+    margin-top: 0;
+    border-top: none;
   }
   .products-header {
     text-align: center;
@@ -637,10 +640,11 @@
   .values {
     background: var(--color-cream);
     position: relative;
+    margin-top: 0;
   }
   .values-sky {
-    background: var(--color-blue);
-    padding: var(--s8) 0 calc(var(--circle-size) / 2 + var(--s5));
+    background: linear-gradient(180deg, #e8f7fb 0%, #b8d9ed 25%, #009cdc 40%, #3ab6e4 40%, #7ed0f0 100%);
+    padding: var(--s8) var(--s3) calc(var(--circle-size) / 2 + var(--s5));
     text-align: center;
   }
   .values-sky h2 {
@@ -662,6 +666,7 @@
     max-width: var(--maxw);
     margin: calc(var(--circle-size) / -2) auto 0;
     padding: 0 var(--s3) var(--s8);
+    background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-cream) 90%, #e8f7fb 100%);
   }
   .value-item {
     display: flex;
@@ -710,8 +715,9 @@
 
   /* ——— BRANDS ——— */
   .brands {
-    background: var(--color-navy);
-    padding: var(--s8) 0;
+    background: linear-gradient(180deg, #e8f7fb 0%, #b8d9ed 15%, #009cdc 30%, #3ab6e4 100%);
+    padding: var(--s8) var(--s3);
+    margin-top: 0;
   }
   .brands-header {
     text-align: center;
@@ -795,8 +801,9 @@
 
   /* ——— B2B ——— */
   .b2b {
-    background: linear-gradient(180deg, var(--color-sky) 0%, var(--color-blue) 100%);
-    padding: var(--s8) 0;
+    background: linear-gradient(180deg, #3ab6e4 0%, #1fa8d8 50%, #009cdc 100%);
+    padding: var(--s8) var(--s3);
+    margin-top: 0;
     position: relative;
     overflow: hidden;
   }
