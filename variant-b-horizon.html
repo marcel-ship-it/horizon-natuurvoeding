@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizon Natuurvoeding – De horizon leeft</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: #003A5C;
+      line-height: 1.6;
+      background: #FAF0DC;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+      transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+      background: rgba(250, 240, 220, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 174, 239, 0.1);
+    }
+
+    nav .logo {
+      font-family: 'Zilla Slab', serif;
+      font-weight: 900;
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      color: #00AEEF;
+      letter-spacing: -2px;
+    }
+
+    nav .links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #FAF0DC;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+
+    nav.scrolled a {
+      color: #003A5C;
+    }
+
+    nav a:hover {
+      color: #00AEEF;
+    }
+
+    .btn {
+      padding: 0.7rem 1.5rem;
+      background: #00AEEF;
+      color: #FAF0DC;
+      border: none;
+      border-radius: 50px;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #003A5C;
+      transform: translateY(-2px);
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #FAF0DC;
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .horizon-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .animated-gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #FAF0DC 0%, #B8E8F5 45%, #00AEEF 100%);
+      animation: breathingGradient 10s ease-in-out infinite;
+      border-radius: 0;
+    }
+
+    @keyframes breathingGradient {
+      0%, 100% {
+        background-position: 0% 0%;
+        transform: translateY(0px);
+      }
+      50% {
+        background-position: 0% 5%;
+        transform: translateY(-5px);
+      }
+    }
+
+    .horizon-line {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #003A5C;
+      top: 50%;
+      left: 0;
+    }
+
+    .horizon-text {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      align-items: center;
+    }
+
+    .horizon-text .above {
+      font-family: 'Zilla Slab', serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 900;
+      color: #00AEEF;
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+
+    .horizon-text .below {
+      font-family: 'Zilla Slab', serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 900;
+      color: #FAF0DC;
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+
+    .hero-subtitle {
+      color: #003A5C;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      margin-top: 2rem;
+      font-weight: 400;
+      max-width: 600px;
+    }
+
+    .hero .btn {
+      margin-top: 2rem;
+    }
+
+    /* Story Section */
+    .story-section {
+      background: #FAF0DC;
+      padding: clamp(3rem, 10vw, 6rem) 2rem;
+    }
+
+    .story-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .story-text h2 {
+      font-family: 'Zilla Slab', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      color: #003A5C;
+      margin-bottom: 1.5rem;
+      letter-spacing: -1px;
+    }
+
+    .story-text p {
+      font-size: 1rem;
+      color: #003A5C;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .story-visual {
+      background: linear-gradient(135deg, #FAF0DC 0%, #B8E8F5 45%, #00AEEF 100%);
+      min-height: 400px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Zilla Slab', serif;
+      font-size: 3rem;
+      color: rgba(0, 58, 92, 0.2);
+      animation: breathingGradient 10s ease-in-out infinite;
+    }
+
+    .pullquote {
+      font-family: 'Zilla Slab', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: #00AEEF;
+      margin: 2rem 0;
+      padding-left: 2rem;
+      border-left: 4px solid #00AEEF;
+    }
+
+    /* Values Section */
+    .values-section {
+      background: #fff;
+      padding: clamp(3rem, 10vw, 6rem) 2rem;
+    }
+
+    .values-section h2 {
+      font-family: 'Zilla Slab', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      text-align: center;
+      color: #003A5C;
+      margin-bottom: 3rem;
+      letter-spacing: -1px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .value-block {
+      border-left: 4px solid #00AEEF;
+      padding-left: 1.5rem;
+      padding-top: 1rem;
+    }
+
+    .value-block h3 {
+      font-family: 'Zilla Slab', serif;
+      font-weight: 700;
+      color: #003A5C;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .value-block p {
+      font-size: 0.95rem;
+      color: #003A5C;
+      line-height: 1.6;
+    }
+
+    /* Brands Section */
+    .brands-section {
+      background: #FAF5EC;
+      padding: clamp(3rem, 10vw, 6rem) 2rem;
+    }
+
+    .brands-section h2 {
+      font-family: 'Zilla Slab', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      text-align: center;
+      color: #003A5C;
+      margin-bottom: 3rem;
+      letter-spacing: -1px;
+    }
+
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .brand-tile {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      border-top: 4px solid #00AEEF;
+      transition: transform 0.3s ease;
+    }
+
+    .brand-tile:hover {
+      transform: translateY(-8px);
+    }
+
+    .brand-tile h3 {
+      font-family: 'Zilla Slab', serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #00AEEF;
+      margin-bottom: 0.5rem;
+    }
+
+    .brand-tile p {
+      font-size: 0.95rem;
+      color: #003A5C;
+      line-height: 1.6;
+    }
+
+    /* B2B Section */
+    .b2b-section {
+      background: linear-gradient(180deg, #B8E8F5 0%, #00AEEF 100%);
+      color: #FAF0DC;
+      padding: clamp(3rem, 10vw, 6rem) 2rem;
+    }
+
+    .b2b-section h2 {
+      font-family: 'Zilla Slab', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 3rem;
+      letter-spacing: -1px;
+    }
+
+    .b2b-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+    }
+
+    .b2b-card h3 {
+      font-family: 'Zilla Slab', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .b2b-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    .b2b-cta {
+      text-align: center;
+    }
+
+    .b2b-cta .btn {
+      background: #FAF0DC;
+      color: #00AEEF;
+    }
+
+    .b2b-cta .btn:hover {
+      background: #003A5C;
+      color: #FAF0DC;
+    }
+
+    /* Footer */
+    footer {
+      background: #003A5C;
+      color: #FAF0DC;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    footer .logo {
+      font-family: 'Zilla Slab', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      color: #00AEEF;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    footer .links {
+      margin-top: 2rem;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      color: #B8E8F5;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #FAF0DC;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav .links {
+        display: none;
+      }
+
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .horizon-text .above,
+      .horizon-text .below {
+        font-size: clamp(1.5rem, 4vw, 3rem);
+      }
+
+      .values-grid,
+      .b2b-grid,
+      .brands-grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer .links {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="nav">
+    <div class="logo">HORIZON</div>
+    <div class="links">
+      <a href="#verhaal">Verhaal</a>
+      <a href="#waarden">Waarden</a>
+      <a href="#merken">Merken</a>
+      <a href="#samenwerken">Samenwerken</a>
+    </div>
+  </nav>
+
+  <!-- Hero with Animated Horizon -->
+  <section class="hero">
+    <div class="horizon-container">
+      <div class="animated-gradient"></div>
+      <div class="horizon-line"></div>
+      <div class="horizon-text">
+        <div class="above">WAAR DROOM</div>
+        <div class="below">WERKELIJKHEID WORDT</div>
+      </div>
+    </div>
+    <p class="hero-subtitle">Biologisch voedsel. Gebouwd op 46 jaar vertrouwen.</p>
+    <button class="btn">Ontdek ons verhaal →</button>
+  </section>
+
+  <!-- Story Section -->
+  <section class="story-section" id="verhaal">
+    <div class="story-grid">
+      <div class="story-text">
+        <h2>Van keukentafel tot ketenverandering</h2>
+        <p>In 1978 begon Gaston Smit op zijn keukentafel. Een man, een idee, een verzet tegen het gemakkelijke.</p>
+        <p>Vandaag: vier merken, 30+ medewerkers, dezelfde missie. We hebben nooit voet opzettelijk gegeven.</p>
+        <div class="pullquote">"Geen snelle deals. Geen concessies."</div>
+        <p>Dat is wie we zijn. Dat is hoe we het doen. Dat is waarom je ons vertrouwt.</p>
+      </div>
+      <div class="story-visual">
+        <span>1978</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="values-section" id="waarden">
+    <h2>WAAR WE VOOR STAAN</h2>
+    <div class="values-grid">
+      <div class="value-block">
+        <h3>INTEGER</h3>
+        <p>Eerlijk. Transparant. Geen marketing fluff. Wat we zeggen, doen we.</p>
+      </div>
+      <div class="value-block">
+        <h3>PUUR</h3>
+        <p>Geen afkortingen. Geen compromissen. Biologisch betekent biologisch.</p>
+      </div>
+      <div class="value-block">
+        <h3>AUTONOOM</h3>
+        <p>We kiezen onze weg. De moeilijke weg. De goede weg.</p>
+      </div>
+      <div class="value-block">
+        <h3>EARTHED</h3>
+        <p>Met beide voeten in de aarde. Verbonden met boeren. Met natuur. Met werk.</p>
+      </div>
+      <div class="value-block">
+        <h3>UTOPISTISCH</h3>
+        <p>We dromen ervan dat biologisch de norm wordt. We bouwen eraan. Elke dag.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands Section -->
+  <section class="brands-section" id="merken">
+    <h2>VIER MERKEN VOOR VIER DOELGROEPEN</h2>
+    <div class="brands-grid">
+      <div class="brand-tile">
+        <h3>HORIZON</h3>
+        <p>Het klassieker. Het origineel. Voor iedereen die niet inlevert op kwaliteit.</p>
+      </div>
+      <div class="brand-tile">
+        <h3>MONKI</h3>
+        <p>Vers. Direct van de boer. Groenten die smaken zoals groenten horen te smaken.</p>
+      </div>
+      <div class="brand-tile">
+        <h3>JORI</h3>
+        <p>Kruiden en specerijen. Echt goed. Echt eerlijk. Echt biologisch.</p>
+      </div>
+      <div class="brand-tile">
+        <h3>KREKELTJE</h3>
+        <p>Voor kinderen. Voor gezinnen. Voeding zonder gelul. Met liefde.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B Section -->
+  <section class="b2b-section" id="samenwerken">
+    <h2>SAMEN MAKEN WE BIOLOGISCH DE NORM</h2>
+    <div class="b2b-grid">
+      <div class="b2b-card">
+        <h3>WINKELS</h3>
+        <p>Sterke merken. Loyale klanten. Je voert merken die spreken.</p>
+      </div>
+      <div class="b2b-card">
+        <h3>DISTRIBUTEURS</h3>
+        <p>Partner zijn. Support krijgen. Winnen samen. Zo werken we.</p>
+      </div>
+      <div class="b2b-card">
+        <h3>FOOD SERVICE</h3>
+        <p>Transparantie van dag één. Restaurants verdienen eerlijkheid.</p>
+      </div>
+    </div>
+    <div class="b2b-cta">
+      <button class="btn">Praat met ons →</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="logo">HORIZON</div>
+    <p>Samen bereiken we 'm wel!</p>
+    <p>Fannius Scholtenstraat 61B, 1051 EV Amsterdam</p>
+    <p style="margin-top: 1.5rem; opacity: 0.8;">+31 (0)6 1234 5678 · info@horizonnatuurvoeding.nl</p>
+    <div class="links">
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Email</a>
+    </div>
+    <p style="margin-top: 2rem; font-size: 0.85rem; opacity: 0.6;">© 2026 Horizon Natuurvoeding. Alles biologisch.</p>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>

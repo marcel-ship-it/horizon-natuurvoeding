@@ -1,0 +1,246 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /index.php
+        - img [ref=e6]
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Over Ons" [ref=e10] [cursor=pointer]:
+            - /url: /pages/overOns/overOns.php
+            - button "Over Ons" [ref=e11]:
+              - text: Over Ons
+              - img [ref=e12]
+        - listitem [ref=e14]:
+          - link "Productie" [ref=e16] [cursor=pointer]:
+            - /url: /pages/productie/productie.php
+            - button "Productie" [ref=e17]:
+              - text: Productie
+              - img [ref=e18]
+        - listitem [ref=e20]:
+          - link "Merken" [ref=e22] [cursor=pointer]:
+            - /url: /pages/merken/
+            - button "Merken" [ref=e23]:
+              - text: Merken
+              - img [ref=e24]
+        - listitem [ref=e26]:
+          - link "Nieuw! Recepten" [ref=e27] [cursor=pointer]:
+            - /url: /recepten.php
+            - generic [ref=e28]: Nieuw!
+            - text: Recepten
+        - listitem [ref=e29]:
+          - link "Waar Te Koop" [ref=e30] [cursor=pointer]:
+            - /url: /pages/waarTeKoop/waarTeKoop.php
+        - listitem [ref=e31]:
+          - link "Nieuws" [ref=e32] [cursor=pointer]:
+            - /url: /pages/nieuws/index.php
+        - listitem [ref=e33]:
+          - link "Contact" [ref=e35] [cursor=pointer]:
+            - /url: /pages/contact/contact.php
+            - button "Contact" [ref=e36]:
+              - text: Contact
+              - img [ref=e37]
+        - listitem [ref=e39]:
+          - link [ref=e40] [cursor=pointer]:
+            - /url: /pages/productie/certs.php
+            - img [ref=e41]
+        - listitem [ref=e42]:
+          - button [ref=e44]:
+            - img [ref=e45]
+      - list:
+        - listitem [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49] [cursor=pointer]:
+              - text: Over Ons
+              - img [ref=e50]
+            - generic:
+              - link "Visie & Missie" [ref=e52] [cursor=pointer]:
+                - /url: /pages/overOns/overOns.php#misi-visie
+              - link "Ons Team" [ref=e53] [cursor=pointer]:
+                - /url: /pages/overOns/overOns.php#onsTeam
+              - link "Geschiedenis" [ref=e54] [cursor=pointer]:
+                - /url: /pages/overOns/overOns.php#geschiedenis
+              - link "Relaties" [ref=e55] [cursor=pointer]:
+                - /url: /pages/overOns/overOns.php#relaties
+        - listitem [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58] [cursor=pointer]:
+              - text: Productie
+              - img [ref=e59]
+            - generic:
+              - link "Notenpasta's" [ref=e61] [cursor=pointer]:
+                - /url: /pages/productie/productie.php
+              - link "Verpakken" [ref=e62] [cursor=pointer]:
+                - /url: /pages/productie/productie.php#v&a
+              - link "Food Ingredients" [ref=e63] [cursor=pointer]:
+                - /url: /pages/productie/productie.php#foodIngredients
+              - link "Kwaliteit" [ref=e64] [cursor=pointer]:
+                - /url: /pages/productie/productie.php#kwaliteit
+              - link "Certificering" [ref=e65] [cursor=pointer]:
+                - /url: /pages/productie/productie.php#certificering
+        - listitem [ref=e66]:
+          - generic [ref=e67]:
+            - generic [ref=e68] [cursor=pointer]:
+              - text: Merken
+              - img [ref=e69]
+            - generic:
+              - link "Onze Merken" [ref=e71] [cursor=pointer]:
+                - /url: /pages/merken/index.php
+              - link "Horizon" [ref=e72] [cursor=pointer]:
+                - /url: /pages/merken/horizon.php
+              - link "Monki" [ref=e73] [cursor=pointer]:
+                - /url: /pages/merken/monki.php
+              - link "Jori" [ref=e74] [cursor=pointer]:
+                - /url: /pages/merken//jori.php
+              - link "Krekeltje" [ref=e75] [cursor=pointer]:
+                - /url: /pages/merken/krekeltje.php
+        - listitem [ref=e76]:
+          - link "Nieuw! Recepten" [ref=e77] [cursor=pointer]:
+            - /url: /recepten.php
+            - generic [ref=e78]: Nieuw!
+            - text: Recepten
+        - listitem [ref=e79]:
+          - link "Waar Te Koop" [ref=e80] [cursor=pointer]:
+            - /url: /pages/waarTeKoop/waarTeKoop.php
+        - listitem [ref=e81]:
+          - link "Nieuws" [ref=e82] [cursor=pointer]:
+            - /url: /pages/nieuws/nieuws.php
+        - listitem [ref=e83]:
+          - generic [ref=e84]:
+            - generic [ref=e85] [cursor=pointer]:
+              - text: Contact
+              - img [ref=e86]
+            - generic:
+              - link "Contactformulier" [ref=e88] [cursor=pointer]:
+                - /url: /pages/contact/contact.php
+              - link "Vacatures" [ref=e89] [cursor=pointer]:
+                - /url: /pages/contact/vacatures.php
+        - listitem [ref=e90]:
+          - generic [ref=e91]:
+            - img [ref=e93] [cursor=pointer]
+            - generic:
+              - button "Nederlands" [ref=e95] [cursor=pointer]:
+                - img [ref=e96]
+                - text: Nederlands
+              - button "English" [ref=e97] [cursor=pointer]:
+                - img [ref=e98]
+                - text: English
+              - button "Deutsch" [ref=e99] [cursor=pointer]:
+                - img [ref=e100]
+                - text: Deutsch
+              - button "Español" [ref=e101] [cursor=pointer]:
+                - img [ref=e102]
+                - text: Español
+              - button "Français" [ref=e103] [cursor=pointer]:
+                - img [ref=e104]
+                - text: Français
+  - generic [ref=e106]:
+    - generic [ref=e107]:
+      - generic [ref=e108]:
+        - heading "VISIE & MISSIE" [level=1] [ref=e109]
+        - paragraph [ref=e111]: Horizon Natuurvoeding produceert en verkoopt gezonde en natuurlijke voeding, die bijdraagt aan een duurzame samenleving. We kiezen bewust voor 100 % biologische en plantaardige grondstoffen en werken zonder kunstmatige toevoegingen en toegevoegde suiker. Horizon Natuurvoeding haalt alle biologische grondstoffen zoveel mogelijk rechtstreeks bij de bron. Ons uitgangspunt is dat we langjarig en goed samenwerken met vaste leveranciers, die garant staan voor biologische producten van topkwaliteit. De oorsprong van onze missie en visie ligt in het vegetarisme, de macrobiotiek en natuurvoeding. In de jaren zeventig van de vorige eeuw kreeg het gezondheidsaspect van voeding steeds meer aandacht en ook het milieu werd een belangrijke zaak. Als reactie op de steeds sterker vervuilde wereld ontstond toen de ecologische beweging, waar de biologische landbouw uit voortgekomen is.
+      - generic [ref=e114]: Earth day 1970 (begin jaren Horizon Natuurvoeding BV)
+    - generic [ref=e116]:
+      - heading "ONS TEAM" [level=1] [ref=e117]
+      - paragraph [ref=e118]: "Horizon Natuurvoeding is een bedrijf met een familiaire sfeer. Onze medewerkers verbinden zich met hart en ziel aan 'hun' bedrijf en blijven vaak lange tijd bij ons in dienst. Daarmee hebben we dus veel ervaring, kennis en expertise in huis. Daar zijn we trots op! We hebben acht afdelingen: administratie, export, import, verkoop, kwaliteit, NPD (New Product Development), logistiek en productie."
+    - generic [ref=e119]:
+      - generic [ref=e120]:
+        - heading "GESCHIEDENIS" [level=1] [ref=e121]
+        - generic [ref=e122]:
+          - paragraph [ref=e123]: "Horizon Natuurvoeding is in 1978 opgericht door pionier en ondernemer Gaston Smit. De hippietijd, waarin het merk Horizon werd geboren, was volgens Gaston magisch. Vernieuwende ideeën zetten hele groepen mensen in beweging. De hippies hadden het licht gezien en wisten precies welke kant het op moest met de wereld. Ze kregen een hekel aan polyester en gif en gingen zich anders kleden en voeden. Dat biologische landbouw dé weg was om te gaan, voelden ze aan hun water. Gaston wist ook: als hij de wereld wilde verbeteren dan moest hij bij zichzelf beginnen."
+          - paragraph [ref=e124]: "Geïnspireerd door het vegetarisme en de macrobiotiek kwam Gaston op het idee om tahin op de markt te brengen. Bij een Griekse vriend kocht hij witte tahin in. Aan de keukentafel van zijn studentenkamer vulde hij eigenhandig potjes af. De zelfgemaakte etiketten plakte hij er kaarsrecht op. De kersverse ondernemer wist: zorgvuldigheid is de basis voor een gezond bedrijf."
+          - paragraph [ref=e125]:
+            - text: "In die tijd werden de eerste biologische merken gedoopt met betekenisvolle namen als Groene Aarde of Gedegen Kost. Gaston wilde echter een naam waarmee zijn producten niet in een hokje gestopt konden worden. Horizon vond hij internationaal goed klinken. Bovendien sprak de ongrijpbaarheid van de einder hem aan: je loopt er naartoe maar het blijft toch ver weg, zoals een ideaal waar je naar kunt hunkeren en verlangen. Op een boerderij in Friesland heeft hij samen met Ramon van de Werken, een bevriende kunstenaar, het logo ontworpen. Ze zaten aan een tafel en probeerden van alles uit. Op een gegeven moment trokken ze een streep, die de letters een stukje afsnijdt, alsof de letters vanachter de horizon omhoog komen. Ook kunstenaar Ramon bleef betrokken als schilder en ontwerper van de onconventionele etiketten. De keukentafel wordt al snel te klein en de productie verhuisde naar een werkruimte in Ermelo."
+            - text: In 1985 verhuist Horizon Natuurvoeding naar de huidige bedrijfsruimte in IJsselstein. Het bedrijf is gegroeid tot een BV met werk voor ongeveer 35 medewerkers. In de zomer van 2022 verkoopt Gaston Smit zijn levenswerk aan lange termijn investeerder Anders Invest Food & Agri en bio pionier Poppe Braam. Samen met alle betrokken en deskundige medewerkers willen Anders Invest Food & Agri en Poppe Braam het bedrijf verder laten bloeien!
+      - generic [ref=e126]:
+        - generic [ref=e129]: Links founder Gaston Smit
+        - generic [ref=e132]: Eerste potten notenpasta
+    - generic [ref=e134]:
+      - heading "RELATIES" [level=1] [ref=e135]
+      - paragraph [ref=e137]: "Traceerbaarheid (weten waar de grondstoffen vandaan komen) is voor ons een vanzelfsprekendheid. We doen alleen zaken met leveranciers waarbij we een goed gevoel hebben en die, net als wijzelf, hart hebben voor biologische landbouw. In de praktijk resulteert dat in langjarige samenwerkingen. Met de meeste leveranciers hebben we al tientallen jaren een trouwe relatie en onze inkopers en kwaliteitsmedewerkers bezoeken hen persoonlijk voor de audits. Onze amandelen kopen we sinds 1998 in bij boerencoöperatie Almendrera del Sur in Andalusië; omdat wij met ze kunnen lezen en schrijven, verzorgen wij inmiddels hun gehele afzet in Europa. Onze manier van samenwerken geeft rust aan beide partijen: wij kunnen vertrouwen op de gewenste topkwaliteit en zij hebben afzetgarantie met een eerlijke verkoopprijs."
+  - contentinfo [ref=e141]:
+    - generic [ref=e143]:
+      - generic [ref=e144]:
+        - heading "OVER ONS" [level=4] [ref=e145]
+        - list [ref=e146]:
+          - listitem [ref=e147]:
+            - link "VISIE & MISSIE" [ref=e148] [cursor=pointer]:
+              - /url: /pages/overOns/overOns.php
+          - listitem [ref=e149]:
+            - link "ONS TEAM" [ref=e150] [cursor=pointer]:
+              - /url: /pages/overOns/overOns.php#onsTeam
+          - listitem [ref=e151]:
+            - link "GESCHIEDENIS" [ref=e152] [cursor=pointer]:
+              - /url: /pages/overOns/overOns.php#geschiedenis
+          - listitem [ref=e153]:
+            - link "RELATIES" [ref=e154] [cursor=pointer]:
+              - /url: /pages/overOns/overOns.php#relaties
+      - generic [ref=e155]:
+        - heading "PRODUCTIE" [level=4] [ref=e156]
+        - list [ref=e157]:
+          - listitem [ref=e158]:
+            - link "NOTENPASTA'S" [ref=e159] [cursor=pointer]:
+              - /url: /pages/productie/productie.php
+          - listitem [ref=e160]:
+            - link "VERPAKKEN" [ref=e161] [cursor=pointer]:
+              - /url: /pages/productie/productie.php#v&a
+          - listitem [ref=e162]:
+            - link "FOOD INGREDIENTS" [ref=e163] [cursor=pointer]:
+              - /url: /pages/productie/productie.php#foodIngredients
+          - listitem [ref=e164]:
+            - link "KWALITEIT" [ref=e165] [cursor=pointer]:
+              - /url: /pages/productie/productie.php#kwaliteit
+          - listitem [ref=e166]:
+            - link "CERTIFICERING" [ref=e167] [cursor=pointer]:
+              - /url: /pages/productie/productie.php#certificering
+      - generic [ref=e168]:
+        - heading "MERKEN" [level=4] [ref=e169]
+        - list [ref=e170]:
+          - listitem [ref=e171]:
+            - link "HORIZON" [ref=e172] [cursor=pointer]:
+              - /url: /pages/merken/horizon.php
+          - listitem [ref=e173]:
+            - link "MONKI" [ref=e174] [cursor=pointer]:
+              - /url: /pages/merken/monki.php
+          - listitem [ref=e175]:
+            - link "JORI" [ref=e176] [cursor=pointer]:
+              - /url: /pages/merken/jori.php
+          - listitem [ref=e177]:
+            - link "KREKELTJE" [ref=e178] [cursor=pointer]:
+              - /url: /pages/merken/krekeltje.php
+      - generic [ref=e179]:
+        - link "WAAR TE KOOP" [ref=e180] [cursor=pointer]:
+          - /url: /pages/waarTeKoop/waarTeKoop.php
+          - heading "WAAR TE KOOP" [level=4] [ref=e181]
+        - list
+      - generic [ref=e182]:
+        - link "NIEUWS" [ref=e183] [cursor=pointer]:
+          - /url: /pages/nieuws/index.php
+          - heading "NIEUWS" [level=4] [ref=e184]
+        - list
+      - generic [ref=e185]:
+        - heading "CONTACT" [level=4] [ref=e186]
+        - list [ref=e187]:
+          - listitem [ref=e188]:
+            - link "CONTACT FORMULIER" [ref=e189] [cursor=pointer]:
+              - /url: /pages/contact/contact.php
+          - listitem [ref=e190]:
+            - link "VACATURES" [ref=e191] [cursor=pointer]:
+              - /url: /pages/contact/vacatures.php
+      - generic [ref=e192]:
+        - heading "VOLG ONS" [level=4] [ref=e193]
+        - generic [ref=e194]:
+          - link [ref=e195] [cursor=pointer]:
+            - /url: https://www.instagram.com/horizonnatuurvoeding/
+            - img [ref=e196]
+          - link [ref=e198] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/horizon-natuurvoeding-bv/
+            - img [ref=e199]
+      - generic [ref=e201]:
+        - heading "100% BIOLOGISCH" [level=4] [ref=e202]
+        - link [ref=e203] [cursor=pointer]:
+          - /url: /pages/productie/certs.php
+          - img [ref=e204]
+    - paragraph [ref=e206]:
+      - img [ref=e207]
+      - text: Horizon Natuurvoeding B.V. 2025

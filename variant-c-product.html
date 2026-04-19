@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizon Natuurvoeding – Wat erop staat, zit erin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: #003A5C;
+      line-height: 1.6;
+      background: #FAF0DC;
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #FAF0DC;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 174, 239, 0.1);
+    }
+
+    nav .logo {
+      font-family: 'Zilla Slab', serif;
+      font-weight: 900;
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      color: #00AEEF;
+      letter-spacing: -2px;
+    }
+
+    nav .links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #003A5C;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      color: #00AEEF;
+    }
+
+    .btn {
+      padding: 0.7rem 1.5rem;
+      background: #00AEEF;
+      color: #FAF0DC;
+      border: none;
+      border-radius: 50px;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #003A5C;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #00AEEF;
+      border: 2px solid #00AEEF;
+      margin-left: 1rem;
+    }
+
+    .btn-secondary:hover {
+      background: #00AEEF;
+      color: #FAF0DC;
+    }
+
+    /* Hero */
+    .hero {
+      background: #FAF0DC;
+      padding: clamp(3rem, 10vw, 6rem) 2rem;
+      min-height: auto;
+    }
+
+    .hero-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    /* CSS Jar */
+    .jar-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 500px;
+    }
+
+    .jar {
+      position: relative;
+      width: 200px;
+      height: 270px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%);
+      border-radius: 20px;
+      border: 2px solid rgba(0, 174, 239, 0.3);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+    }
+
+    .jar-lid {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 160px;
+      height: 20px;
+      background: linear-gradient(180deg, #4CAF50 0%, #3a8c3f 100%);
+      border-radius: 8px 8px 0 0;
+      border: 1px solid rgba(0, 174, 239, 0.2);
+      z-index: 20;
+    }
+
+    .jar-lid::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 180px;
+      height: 8px;
+      background: linear-gradient(180deg, #5ab961 0%, rgba(90, 185, 97, 0.5) 100%);
+      border-radius: 50%;
+    }
+
+    .jar-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 160px;
+      height: 80px;
+      background: #00AEEF;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      box-shadow: 0 4px 12px rgba(0, 174, 239, 0.3);
+    }
+
+    .jar-label-text {
+      color: #FAF0DC;
+      font-family: 'Zilla Slab', serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-align: center;
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+    }
+
+    /* Hero Content */
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-label {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      color: #00AEEF;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .hero-headline {
+      font-family: 'Zilla Slab', serif;
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      font-weight: 900;
+      color: #003A5C;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      margin-bottom: 1rem;
+    }
+
+    .hero-subtext {
+      font-size: 1rem;
+      color: #003A5C;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Stats Strip */
+    .stats-strip {
+      background: #00AEEF;
+      color: #FAF0DC;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .stat-number {
+      font-family: 'Zilla Slab', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 900;
+      color: #FAF0DC;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0.95;
+    }
+
+    /* Werkwijze Section */
+    .werkwijze-section {
+      background: #FAF0DC;
+      padding: clamp(3rem, 10vw, 6rem) 2rem;
+    }
+
+    .werkwijze-section h2 {
+      font-family: 'Zilla Slab', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      text-align: center;
+      color: #003A5C;
+      margin-bottom: 3rem;
+      letter-spacing: -1px;
+    }
+
+    .werkwijze-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .werkwijze-card {
+      text-align: center;
+    }
+
+    .werkwijze-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, #B8E8F5 0%, #00AEEF 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: #FAF0DC;
+    }
+
+    .werkwijze-card h3 {
+      font-family: 'Zilla Slab', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #003A5C;
+      margin-bottom: 1rem;
+    }
+
+    .werkwijze-card p {
+      font-size: 0.95rem;
+      color: #003A5C;
+      line-height: 1.6;
+    }
+
+    /* Brands Section */
+    .brands-section {
+      background: white;
+      padding: clamp(3rem, 10vw, 6rem) 2rem;
+    }
+
+    .brands-section h2 {
+      font-family: 'Zilla Slab', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      text-align: center;
+      color: #003A5C;
+      margin-bottom: 3rem;
+      letter-spacing: -1px;
+    }
+
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .brand-item {
+      background: #FAF0DC;
+      padding: 2rem;
+      border-radius: 8px;
+      border-top: 3px solid #00AEEF;
+      transition: transform 0.3s ease;
+    }
+
+    .brand-item:hover {
+      transform: translateY(-8px);
+    }
+
+    .brand-item h3 {
+      font-family: 'Zilla Slab', serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #00AEEF;
+      margin-bottom: 0.5rem;
+    }
+
+    .brand-item p {
+      font-size: 0.95rem;
+      color: #003A5C;
+      line-height: 1.6;
+    }
+
+    /* B2B Section */
+    .b2b-section {
+      background: #003A5C;
+      color: #FAF0DC;
+      padding: clamp(3rem, 10vw, 6rem) 2rem;
+    }
+
+    .b2b-section h2 {
+      font-family: 'Zilla Slab', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 3rem;
+      letter-spacing: -1px;
+    }
+
+    .b2b-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+    }
+
+    .b2b-card h3 {
+      font-family: 'Zilla Slab', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #B8E8F5;
+    }
+
+    .b2b-card p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      opacity: 0.95;
+    }
+
+    .b2b-cta {
+      text-align: center;
+    }
+
+    .b2b-cta .btn {
+      background: #FAF0DC;
+      color: #003A5C;
+    }
+
+    .b2b-cta .btn:hover {
+      background: #B8E8F5;
+      color: #003A5C;
+    }
+
+    /* Manifesto Section */
+    .manifesto-section {
+      background: #FAF0DC;
+      padding: clamp(3rem, 10vw, 6rem) 2rem;
+      text-align: center;
+    }
+
+    .manifesto-section h2 {
+      font-family: 'Zilla Slab', serif;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 900;
+      color: #003A5C;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    /* Footer */
+    footer {
+      background: #00AEEF;
+      color: #FAF0DC;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    footer .logo {
+      font-family: 'Zilla Slab', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      color: #FAF0DC;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    footer .links {
+      margin-top: 2rem;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      color: #FAF0DC;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #003A5C;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav .links {
+        display: none;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .jar-container {
+        min-height: 300px;
+      }
+
+      .jar {
+        width: 150px;
+        height: 200px;
+      }
+
+      .stats-grid,
+      .werkwijze-grid,
+      .brands-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .b2b-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .btn-secondary {
+        margin-left: 0;
+      }
+
+      footer .links {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">HORIZON</div>
+    <div class="links">
+      <a href="#werkwijze">Werkwijze</a>
+      <a href="#merken">Merken</a>
+      <a href="#samenwerken">Samenwerken</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="btn">Samenwerken? →</button>
+  </nav>
+
+  <!-- Hero with Jar -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="jar-container">
+        <div class="jar">
+          <div class="jar-lid"></div>
+          <div class="jar-label">
+            <div class="jar-label-text">HORIZON<br>100%<br>BIOLOGISCH</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-label">SINDS 1978</div>
+        <h1 class="hero-headline">WAT EROP STAAT, ZIT ERIN.</h1>
+        <p class="hero-subtext">Niks meer. Niks minder. Zo doen we dat al 46 jaar.</p>
+        <div class="hero-buttons">
+          <button class="btn">Controleer de kwaliteit →</button>
+          <button class="btn btn-secondary">Bekijk ons assortiment</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Strip -->
+  <div class="stats-strip">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-number">1978</div>
+        <div class="stat-label">Opgericht</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Medewerkers</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">4</div>
+        <div class="stat-label">Merken</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Biologisch</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Werkwijze Section -->
+  <section class="werkwijze-section" id="werkwijze">
+    <h2>EERLIJK DUURT HET LANGST</h2>
+    <div class="werkwijze-grid">
+      <div class="werkwijze-card">
+        <div class="werkwijze-icon">🌾</div>
+        <h3>Dezelfde boeren, tientallen jaren</h3>
+        <p>Geen jaarlijkse verstoppertjes. We bouwen relaties. We weten elkaars naam. We werken samen.</p>
+      </div>
+      <div class="werkwijze-card">
+        <div class="werkwijze-icon">🔍</div>
+        <h3>We weten waar het vandaan komt</h3>
+        <p>Traceabiliteit is geen keuze, het is standaard. Van zaad tot mond. Altijd.</p>
+      </div>
+      <div class="werkwijze-card">
+        <div class="werkwijze-icon">✓</div>
+        <h3>Geen concessies aan kwaliteit</h3>
+        <p>1 dag te oud? Weg. Niet genoeg smaak? Nope. Biologisch of niet? Alleen biologisch.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands Section -->
+  <section class="brands-section" id="merken">
+    <h2>VIER MERKEN. ÉÉN VERHAAL.</h2>
+    <div class="brands-grid">
+      <div class="brand-item">
+        <h3>HORIZON</h3>
+        <p>Het origineel. Voor iedereen die voeding serieus neemt en niet inlevert.</p>
+      </div>
+      <div class="brand-item">
+        <h3>MONKI</h3>
+        <p>Groenten en fruit. Direct van wie het verbouwt. Dat is het verhaal.</p>
+      </div>
+      <div class="brand-item">
+        <h3>JORI</h3>
+        <p>Kruiden. Specerijen. Eerlijk ingekocht. Echt goed. Echt biologisch.</p>
+      </div>
+      <div class="brand-item">
+        <h3>KREKELTJE</h3>
+        <p>Voor kinderen. Voor gezinnen. Voeding zonder onzin. Met liefde.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B Section -->
+  <section class="b2b-section" id="samenwerken">
+    <h2>WIL JE ONS ASSORTIMENT VOEREN?</h2>
+    <div class="b2b-grid">
+      <div class="b2b-card">
+        <h3>WAT WIJ BIEDEN</h3>
+        <p>Merken die spreken. Klanten die terugkomen. Assortimenten die echt biologisch zijn, niet alleen op papier.</p>
+        <p>Support die luistert. Prijzen die eerlijk zijn. Logistiek die werkt.</p>
+      </div>
+      <div class="b2b-card">
+        <h3>WAT WIJ VRAGEN</h3>
+        <p>Dat je dezelfde waardes deelt. Dat je je klanten even serieus neemt als wij.</p>
+        <p>Dat je begrijpt: biologisch voedsel verdient eerlijkheid. Alles. Van begin tot einde.</p>
+      </div>
+    </div>
+    <div class="b2b-cta">
+      <button class="btn">Praat met ons →</button>
+    </div>
+  </section>
+
+  <!-- Manifesto Section -->
+  <section class="manifesto-section">
+    <h2>SAMEN MAKEN WE BIOLOGISCH DE NORM.</h2>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="logo">HORIZON</div>
+    <p>Samen bereiken we 'm wel!</p>
+    <p>Fannius Scholtenstraat 61B, 1051 EV Amsterdam</p>
+    <p style="margin-top: 1.5rem; opacity: 0.8;">+31 (0)6 1234 5678 · info@horizonnatuurvoeding.nl</p>
+    <div class="links">
+      <a href="https://www.instagram.com/horizonnatuurvoeding/">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Email</a>
+    </div>
+    <p style="margin-top: 2rem; font-size: 0.85rem; opacity: 0.6;">© 2026 Horizon Natuurvoeding. Alles biologisch.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Horizon Natuurvoeding — Samen bereiken we 'm wel.</title>
+<meta name="description" content="Horizon Natuurvoeding: 100% biologisch sinds 1978. Vier merken, één missie. Voor winkels, distributeurs en food service." />
+<link rel="icon" type="image/png" href="assets/images/FaviconRound.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --color-blue: #009cdc;
+    --color-cream: #fff0d8;
+    --color-navy: #009cdc;
+    --color-sky: #b8e8f5;
+    --color-green: #60d553;
+    --horizon-gradient: linear-gradient(180deg, #fff0d8 0%, #b8e8f5 45%, #009cdc 100%);
+
+    --s1: 8px;
+    --s2: 16px;
+    --s3: 24px;
+    --s4: 32px;
+    --s5: 48px;
+    --s6: 64px;
+    --s7: 96px;
+    --s8: 128px;
+
+    --maxw: 1280px;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    color: var(--color-navy);
+    background: var(--color-cream);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+  h1, h2, h3, h4 {
+    font-family: 'Zilla Slab', Georgia, serif;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+
+  .container {
+    width: 100%;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--s3);
+  }
+
+  /* ——— NAV ——— */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--color-cream);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: visible;
+  }
+  .nav.hidden { transform: translateY(-100%); }
+  .nav-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: var(--s2) var(--s3);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--s3);
+    position: relative;
+    min-height: 64px;
+  }
+  /* ——— HORIZON NAVBAR LOGO ——— */
+  .nav-logo-hn {
+    position: absolute;
+    top: 50%;
+    left: var(--s3);
+    transform: translateY(-50%);
+    z-index: 10;
+    text-decoration: none;
+    color: #009cdc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .nav-logo-hn svg {
+    display: block;
+    height: clamp(20px, 3vw, 30px);
+    width: auto;
+    pointer-events: none;
+    user-select: none;
+  }
+  .nav-logo-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: clamp(6px, 0.85vw, 9px);
+    letter-spacing: 0.33em;
+    text-transform: uppercase;
+    color: #009cdc;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .nav-logo img { height: 32px; width: auto; }
+  .nav-links {
+    display: flex;
+    gap: var(--s4);
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .nav-links a {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-navy);
+    position: relative;
+    transition: color 0.2s ease;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--color-blue);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav-links a:hover { color: var(--color-blue); }
+  .nav-links a:hover::after { width: 100%; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s1);
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--color-green);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.12), 0 6px 20px rgba(96, 213, 83, 0.35);
+    border: 1.5px solid rgba(255,255,255,0.25);
+  }
+  .btn-primary:hover {
+    background: #5ecf51;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.12), 0 12px 28px rgba(96, 213, 83, 0.45);
+  }
+  .btn-brand {
+    background: #009cdc;
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1.5px solid rgba(255,255,255,0.2);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.15), 0 6px 20px rgba(0,156,220,0.3);
+  }
+  .btn-brand:hover {
+    background: #0090cc;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.15), 0 12px 28px rgba(0,156,220,0.45);
+  }
+  .btn-light {
+    background: var(--color-cream);
+    color: var(--color-navy);
+  }
+  .btn-light:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+  .btn-outline {
+    border: 2px solid var(--color-navy);
+    color: var(--color-navy);
+  }
+  .btn-outline:hover {
+    background: var(--color-navy);
+    color: var(--color-cream);
+  }
+  .btn .arrow {
+    transition: transform 0.25s ease;
+  }
+  .btn:hover .arrow { transform: translateX(4px); }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+  }
+
+  /* ——— HERO: HORIZON (vast horizon-gradient, bewegende zon) ——— */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* SKY ZONE — VASTE officiële horizon-gradient (brandbook p.52).
+     Bovenaf vol Horizon-blauw, onder lichter blauw richting de horizonlijn.
+     De harde cut zit op de overgang sky → earth. */
+  .hero-sky {
+    flex: 1;
+    min-height: 62vh;
+    position: relative;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 108px;
+    background: linear-gradient(180deg, #009cdc 0%, #3ab6e4 45%, #7ed0f0 78%, #b8e8f5 100%);
+    transition: background 0.6s ease;
+  }
+
+  .hero-sky.night {
+    background: linear-gradient(180deg, #0c1e38 0%, #1a3a52 45%, #2d5a7b 78%, #3d6b92 100%);
+  }
+
+  /* EARTH ZONE — vast crème, harde cut met sky erboven */
+  .hero-earth {
+    background: var(--color-cream);
+    position: relative;
+    margin-top: -2.85rem;
+    padding-top: calc(var(--s2) + 2.85rem);
+    padding-bottom: var(--s5);
+    padding-left: var(--s3);
+    padding-right: var(--s3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s4);
+    z-index: 2;
+  }
+  /* MISSIE BLOK */
+  .hero-missie {
+    text-align: center;
+    opacity: 0;
+    animation: fadeUp 0.8s 1.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+  .hero-missie-statement {
+    display: block;
+    font-family: 'Zilla Slab', Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(1.4rem, 3.5vw, 3rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--color-blue);
+  }
+
+  /* Geen extra horizonlijn nodig — de overgang sky/earth IS de horizon.
+     De witte letters staan voor de cream aarde dankzij z-index. */
+
+  /* STARS — verwijderd */
+
+  /* STARS — verwijderd */
+
+  /* SKY WORDS */
+  .hero-sky-words {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* BEREIKEN WRAP — plain container */
+  .bereiken-wrap {
+    position: relative;
+    display: block;
+  }
+
+  /* ——————————————————————————————————————————
+     WEMWEL WRAP — de horizonlijn snijdt door de onderste
+     ~15% van de letters, net als in het logo.
+
+     TECHNIEK:
+     De .hero-sky heeft overflow:hidden. De .wemwel-wrap zit
+     in de sky. We positioneren een cream balk die FIXED is
+     t.o.v. de viewport — nee, dat werkt niet in overflow:hidden.
+
+     Correcte techniek: de sky loopt door TOT en MET de letters.
+     De cream aarde begint al TIJDENS de laatste tekstregel.
+     We doen dit door de sky GEEN harde ondergrens te geven,
+     maar door de .hero-earth een negatieve margin-top te geven
+     zodat die omhoog schuift achter de laatste tekstregel.
+     De letters staan dan voor de overgang sky/aarde.
+
+     De horizonlijn is een ::before op hero-earth die als
+     absolute lijn boven de bovenkant van hero-earth hangt.
+  —————————————————————————————————————————— */
+
+  .wemwel-wrap {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+
+  /* HEADLINE — all three lines */
+  .hero-hl-line {
+    font-family: 'Zilla Slab', Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(3.4rem, 10.5vw, 9.5rem);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    text-align: center;
+    /* overflow: hidden op de outer container, clip op inner .w wrapper */
+    overflow: hidden;
+    padding: 0.05em 0 0.02em;
+  }
+  /* alle letters cream — zichtbaar op blauwe lucht, smelt samen met cream aarde onderaan */
+  .hl-samen    { color: #fff0d8; }
+  .hl-bereiken { color: #fff0d8; }
+  .hl-wemwel   { color: #fff0d8; overflow: hidden; }
+
+  .hero-hl-line .w {
+    display: inline-block;
+    transform: translateY(110%);
+    animation: wordRise 1.05s cubic-bezier(0.2, 0.85, 0.25, 1) forwards;
+    will-change: transform;
+  }
+  .hl-samen    .w:nth-child(1) { animation-delay: 0.5s; }
+  .hl-bereiken .w:nth-child(1) { animation-delay: 0.7s; }
+  .hl-wemwel   .w:nth-child(1) { animation-delay: 0.9s; }
+  .hl-wemwel   .w:nth-child(2) { animation-delay: 1.0s; }
+  .hl-wemwel   .w:nth-child(3) { animation-delay: 1.1s; }
+  @keyframes wordRise {
+    to { transform: translateY(0); }
+  }
+
+  /* CTA */
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s3);
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeUp 0.9s 1.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  /* Primaire CTA op cream aarde — Horizon-groen (brandbook p.49, exclusief voor CTAs).
+     Tekst wit, DM Sans Medium. */
+  .btn-earth {
+    background: var(--color-green);
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 4px 20px rgba(96, 213, 83, 0.30);
+  }
+  .btn-earth:hover {
+    background: #72e066;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 32px rgba(96, 213, 83, 0.42);
+  }
+  .btn-ghost {
+    color: var(--color-navy);
+    font-weight: 500;
+    padding: 12px 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    transition: color 0.2s ease, gap 0.25s ease;
+    opacity: 0.75;
+  }
+  .btn-ghost::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    bottom: 8px;
+    height: 1.5px;
+    background: currentColor;
+    transform: scaleX(0.3);
+    transform-origin: left center;
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .btn-ghost:hover { color: var(--color-navy); opacity: 1; gap: 12px; }
+  .btn-ghost:hover::after { transform: scaleX(1); }
+
+  /* HEMELGLOED — abstracte lichtbron, grote diffuse zon die over de dag beweegt.
+     Canvas-element op .hero-sky, getekend via requestAnimationFrame. */
+  .hero-orb-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* TIME SCRUBBER — dev-only slider */
+  .time-scrubber {
+    display: flex !important;
+    position: fixed !important;
+    background: #000 !important;
+    padding: 16px 24px !important;
+    border-radius: 12px !important;
+    gap: 16px !important;
+    align-items: center !important;
+    font-family: monospace !important;
+    font-size: 16px !important;
+    color: #fff0d8 !important;
+    z-index: 9999 !important;
+    border: 2px solid #60d553 !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8) !important;
+    width: auto !important;
+    height: auto !important;
+    user-select: none !important;
+  }
+  .time-scrubber .drag-handle {
+    cursor: grab;
+    font-size: 18px;
+    opacity: 0.6;
+    padding: 0 4px 0 0;
+    line-height: 1;
+  }
+  .time-scrubber .drag-handle:active { cursor: grabbing; }
+
+  .time-scrubber label {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .time-scrubber input[type="range"] {
+    width: 250px;
+    height: 8px;
+    cursor: pointer;
+    accent-color: #60d553;
+  }
+
+  .time-scrubber #timeDisplay {
+    min-width: 60px;
+    text-align: right;
+    font-weight: 700;
+    color: #60d553;
+    font-size: 18px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero-sky { min-height: 45vh; }
+    .hero-scroll { display: none; }
+  }
+  @media (max-width: 560px) {
+    .hero-sky { min-height: 40vh; }
+    .hero-hl-line { font-size: clamp(2.8rem, 14vw, 5rem); }
+  }
+
+  /* A11Y */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-hl-line .w { animation: none !important; transform: translateY(0) !important; }
+    .hero-cta { animation: none !important; opacity: 1 !important; transform: none !important; }
+    .hero-scroll { animation: none !important; opacity: 0.45 !important; }
+    .hero-sky::after { transition: none !important; }
+  }
+
+  /* ——— STATS / IMPACT ——— */
+  .stats {
+    background: var(--color-blue);
+    color: var(--color-cream);
+    padding: var(--s7) 0;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s5);
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Zilla Slab', Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    line-height: 0.95;
+    color: var(--color-cream);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--s2);
+  }
+  .stat-label {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+  @media (max-width: 700px) {
+    .stats-grid { grid-template-columns: 1fr; gap: var(--s5); }
+  }
+
+  /* ——— QUOTE / OVER ONS ——— */
+  .quote {
+    padding: var(--s8) 0;
+    background: var(--color-cream);
+  }
+  .quote-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: var(--s6);
+    align-items: center;
+  }
+  .quote-big {
+    font-family: 'Zilla Slab', Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    color: var(--color-navy);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  .quote-big::before {
+    content: '"';
+    color: var(--color-blue);
+    font-size: 1.2em;
+    line-height: 0;
+    vertical-align: -0.35em;
+    margin-right: 0.05em;
+  }
+  .quote-body p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: var(--s2);
+  }
+  @media (max-width: 900px) {
+    .quote { padding: var(--s7) 0; }
+    .quote-grid { grid-template-columns: 1fr; gap: var(--s4); }
+  }
+
+  /* ——— PRODUCT GRID ——— */
+  .products {
+    padding: var(--s8) 0;
+    background: var(--color-cream);
+    border-top: 1px solid rgba(0, 58, 92, 0.08);
+  }
+  .products-header {
+    text-align: center;
+    margin-bottom: var(--s6);
+  }
+  .products-header h2 {
+    font-size: clamp(2.5rem, 5.5vw, 5rem);
+    color: var(--color-navy);
+  }
+  .products-header p {
+    font-size: 1.15rem;
+    margin-top: var(--s2);
+    color: var(--color-navy);
+    opacity: 0.75;
+  }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--s3);
+  }
+  .product-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+    box-shadow: 0 4px 20px rgba(0, 58, 92, 0.04);
+  }
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px -20px rgba(0, 58, 92, 0.2);
+  }
+  .product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  .product-card:hover img { transform: scale(1.05); }
+  .product-card .label {
+    position: absolute;
+    bottom: var(--s2);
+    left: var(--s2);
+    background: var(--color-navy);
+    color: var(--color-cream);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  .product-card.p1 { grid-column: span 7; aspect-ratio: 4/3; }
+  .product-card.p2 { grid-column: span 5; aspect-ratio: 1/1; }
+  .product-card.p3 { grid-column: span 4; aspect-ratio: 1/1; }
+  .product-card.p4 { grid-column: span 4; aspect-ratio: 1/1; }
+  .product-card.p5 { grid-column: span 4; aspect-ratio: 1/1; }
+
+  @media (max-width: 900px) {
+    .products-grid { grid-template-columns: repeat(6, 1fr); gap: var(--s2); }
+    .product-card.p1 { grid-column: span 6; aspect-ratio: 4/3; }
+    .product-card.p2 { grid-column: span 3; aspect-ratio: 1/1; }
+    .product-card.p3 { grid-column: span 3; aspect-ratio: 1/1; }
+    .product-card.p4 { grid-column: span 3; aspect-ratio: 1/1; }
+    .product-card.p5 { grid-column: span 3; aspect-ratio: 1/1; }
+  }
+
+  /* ——— VALUES / CIRCLES ——— */
+  :root { --circle-size: 210px; }
+
+  .values {
+    background: var(--color-cream);
+    position: relative;
+  }
+  .values-sky {
+    background: var(--color-blue);
+    padding: var(--s8) 0 calc(var(--circle-size) / 2 + var(--s5));
+    text-align: center;
+  }
+  .values-sky h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    color: var(--color-cream);
+    margin-bottom: var(--s2);
+  }
+  .values-sky p {
+    color: var(--color-cream);
+    opacity: 0.9;
+    font-size: 1.1rem;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--s3);
+    max-width: var(--maxw);
+    margin: calc(var(--circle-size) / -2) auto 0;
+    padding: 0 var(--s3) var(--s8);
+  }
+  .value-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .value-circle {
+    width: min(var(--circle-size), 100%);
+    aspect-ratio: 1;
+    height: auto;
+    border-radius: 50%;
+    background: var(--color-cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 48px rgba(0, 58, 92, 0.18);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    flex-shrink: 0;
+  }
+  .value-circle.green { background: var(--color-green); }
+  .value-circle:hover { transform: translateY(-8px); }
+  .value-circle h3 {
+    font-size: clamp(1rem, 1.6vw, 1.5rem);
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    padding: 0 var(--s2);
+  }
+  .value-desc {
+    margin-top: var(--s3);
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--color-navy);
+    text-align: left;
+    opacity: 0.85;
+  }
+
+  @media (max-width: 900px) {
+    :root { --circle-size: 160px; }
+    .values-grid { grid-template-columns: repeat(2, 1fr); gap: var(--s4); }
+    .value-desc { text-align: center; }
+  }
+  @media (max-width: 480px) {
+    .values-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ——— BRANDS ——— */
+  .brands {
+    background: var(--color-navy);
+    padding: var(--s8) 0;
+  }
+  .brands-header {
+    text-align: center;
+    margin-bottom: var(--s6);
+  }
+  .brands-header h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    color: var(--color-cream);
+  }
+  .brands-header p {
+    color: var(--color-cream);
+    opacity: 0.75;
+    margin-top: var(--s2);
+    font-size: 1.1rem;
+  }
+  .brands-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--s3);
+  }
+  .brand-card {
+    background: var(--color-cream);
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .brand-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.4);
+  }
+  .brand-cover {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: #fff;
+  }
+  .brand-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  .brand-card:hover .brand-cover img { transform: scale(1.06); }
+  .brand-body {
+    padding: var(--s3);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .brand-body h3 {
+    font-size: 1.75rem;
+    color: var(--color-navy);
+    margin-bottom: var(--s1);
+  }
+  .brand-body p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex: 1;
+    margin-bottom: var(--s2);
+  }
+  .brand-link {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--color-blue);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s ease;
+  }
+  .brand-card:hover .brand-link { gap: 12px; }
+
+  @media (max-width: 900px) {
+    .brands-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .brands-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ——— B2B ——— */
+  .b2b {
+    background: linear-gradient(180deg, var(--color-sky) 0%, var(--color-blue) 100%);
+    padding: var(--s8) 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .b2b-inner {
+    position: relative;
+    text-align: center;
+  }
+  .b2b-inner h2 {
+    font-size: clamp(2.5rem, 5.5vw, 5.5rem);
+    color: #ffffff;
+    margin-bottom: var(--s3);
+  }
+  .b2b-lead {
+    font-size: 1.2rem;
+    max-width: 620px;
+    margin: 0 auto var(--s5);
+    color: #ffffff;
+  }
+  .b2b-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s3);
+    margin-bottom: var(--s5);
+    text-align: left;
+  }
+  .b2b-col {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: var(--s4);
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  }
+  .b2b-col:hover { transform: translateY(-4px); }
+  .b2b-col h3 {
+    font-size: 1.5rem;
+    color: var(--color-navy);
+    margin-bottom: var(--s2);
+  }
+  .b2b-col p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--color-navy);
+  }
+
+  @media (max-width: 800px) {
+    .b2b-cols { grid-template-columns: 1fr; }
+  }
+
+  /* ——— FOOTER ——— */
+  .footer {
+    background: var(--color-navy);
+    color: var(--color-cream);
+    padding: var(--s7) 0 var(--s5);
+    text-align: center;
+  }
+  .footer-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-bottom: var(--s6);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-logo svg {
+    height: 32px;
+    width: auto;
+    color: var(--color-cream);
+    margin-bottom: var(--s2);
+    display: block;
+  }
+  .footer-tag {
+    font-family: 'Zilla Slab', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.35rem;
+    text-transform: uppercase;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: var(--s4);
+    color: var(--color-cream);
+  }
+  .footer-bio img {
+    height: 48px;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  .footer h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.82rem;
+    margin-bottom: var(--s2);
+    opacity: 0.7;
+  }
+  .footer p, .footer a {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+  }
+  .footer a:hover { opacity: 1; color: var(--color-sky); }
+  .footer-bottom {
+    padding-top: var(--s4);
+    border-top: 1px solid rgba(250, 240, 220, 0.15);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--s3);
+    font-size: 0.82rem;
+    opacity: 0.65;
+  }
+  @media (max-width: 800px) {
+    .footer-grid { max-width: 100%; }
+    .footer-bottom { gap: var(--s2); }
+  }
+
+  /* ——— SCROLL REVEAL ——— */
+  .fade-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .fade-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .fade-on-scroll { opacity: 1; transform: none; }
+    .hero-copy h1 .word, .hero-sub, .hero-cta, .hero-image { opacity: 1; transform: none; animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo-hn" aria-label="Horizon Natuurvoeding">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 78" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M36.16,77.77V21.69c0-4.06-2.84-6.5-9.75-6.5V4.63h37.79V15.19c-6.09,0-8.53,2.44-8.53,6.5v17.88h24.38V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h37.38V15.19c-6.09,0-9.35,2.44-9.35,6.5v56.07h-19.5v-26.41h-24.38v26.41h-19.5Z"/>
+        <path fill="currentColor" d="M127.59,77.77s-11.38-9.35-11.38-32.91S131.65,1.78,154,1.78s37.79,19.91,37.79,43.07-11.78,32.91-11.78,32.91h-18.69s8.94-5.69,8.94-32.91c0-15.85-2.84-31.69-16.25-31.69s-16.66,15.85-16.66,31.69c0,27.63,9.35,32.91,9.35,32.91h-19.1Z"/>
+        <path fill="currentColor" fill-rule="evenodd" d="M259.24,57.04c2.84,8.13,2.84,17.07,6.5,17.07,2.84,0,2.84-10.16,2.84-10.16h10.16s-.41,6.5-.81,9.75c-.41,2.84-1.22,4.06-1.22,4.06h-29.26s-2.03-3.66-3.25-12.6c-.41-4.06-1.22-9.35-3.25-11.78-2.03-2.03-7.72-2.03-13.41-2.03v26.41h-19.5V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h40.63c15.03,.41,28.85,7.72,28.85,21.94,0,13.41-14.22,19.1-18.28,19.91,4.88,3.25,6.91,6.5,8.53,10.57h0Zm-31.69-16.25V21.69s-.41-6.91,8.53-6.91,12.19,3.66,12.19,11.78c0,11.78-5.28,14.22-20.72,14.22h0Z"/>
+        <path fill="currentColor" d="M284.84,15.19V4.63h36.57V15.19c-6.5,0-8.53,2.44-8.53,6.5v56.07h-19.5V21.69c0-4.06-2.03-6.5-8.53-6.5h0Z"/>
+        <path fill="currentColor" d="M332.79,77.77s31.69-63.79,31.29-63.79c-21.54-1.22-24.38,13.41-23.97,19.91h-6.91V4.63h56.48v6.91l-32.51,66.23h14.63c8.13-2.44,12.19-14.63,12.19-21.13h7.31v21.13h-58.51Z"/>
+        <path fill="currentColor" d="M411.61,77.77s-11.38-9.35-11.38-32.91S415.68,1.78,438.03,1.78s37.79,19.91,37.79,43.07-11.78,32.91-11.78,32.91h-18.69s8.94-5.69,8.94-32.91c0-15.85-2.85-31.69-16.25-31.69s-16.66,15.85-16.66,31.69c0,27.63,9.34,32.91,9.34,32.91h-19.1Z"/>
+        <path fill="currentColor" d="M490.04,77.77V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h26.82l39.01,49.98V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h28.04V15.19c-6.5,0-8.53,2.44-8.53,6.5v56.07h-20.72l-35.35-47.14v47.14h-12.19Z"/>
+      </svg>
+      <span class="nav-logo-sub">Natuurvoeding</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#merken">Merken</a></li>
+      <li><a href="#producten">Producten</a></li>
+      <li><a href="#over-ons">Over ons</a></li>
+      <li><a href="#b2b">Zakelijk</a></li>
+    </ul>
+    <a href="#b2b" class="btn btn-brand">Praat met ons <span class="arrow">→</span></a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+
+  <!-- SKY — vaste horizon-gradient + bewegende zon + slogan met "Wel."-overlap -->
+  <div class="hero-sky">
+    <canvas class="hero-orb-canvas" id="heroOrbCanvas" aria-hidden="true"></canvas>
+
+    <div class="hero-sky-words">
+      <div class="hero-hl-line hl-samen">
+        <span class="w">Samen</span>
+      </div>
+      <div class="bereiken-wrap">
+        <div class="hero-hl-line hl-bereiken">
+          <span class="w">Bereiken</span>
+        </div>
+      </div>
+      <div class="wemwel-wrap">
+        <div class="hero-hl-line hl-wemwel">
+          <span class="w">We</span> <span class="w">'m</span> <span class="w">Wel.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EARTH — missie + CTAs -->
+  <div class="hero-earth">
+    <div class="hero-missie">
+      <span class="hero-missie-statement">100% Biologisch — voor 100% van iedereen</span>
+    </div>
+
+    <div class="hero-cta">
+      <a href="#b2b" class="btn btn-earth">Laten we groeien <span class="arrow">→</span></a>
+      <a href="#producten" class="btn-ghost">Zien wat we maken <span class="arrow">→</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- TIME SCRUBBER (dev-only) — scroll door de dag/nacht -->
+<div class="time-scrubber" id="timeScrubberPanel" style="top:20px;left:calc(50% - 180px)">
+  <span class="drag-handle" title="Slepen">⠿</span>
+  <label for="timeScrubber">Tijd:</label>
+  <input type="range" id="timeScrubber" min="0" max="1440" value="720" step="1">
+  <span id="timeDisplay">12:00</span>
+</div>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="fade-on-scroll">
+        <div class="stat-num">46 JAAR</div>
+        <div class="stat-label">Biologisch pionier</div>
+      </div>
+      <div class="fade-on-scroll">
+        <div class="stat-num">4 MERKEN</div>
+        <div class="stat-label">Eén missie</div>
+      </div>
+      <div class="fade-on-scroll">
+        <div class="stat-num">30+</div>
+        <div class="stat-label">Gepassioneerde mensen</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE / OVER ONS -->
+<section class="quote" id="over-ons">
+  <div class="container">
+    <div class="quote-grid">
+      <div class="fade-on-scroll">
+        <p class="quote-big">Geen water bij de wijn.</p>
+      </div>
+      <div class="quote-body fade-on-scroll">
+        <p>Biologisch eten was ooit een overtuiging van een kleine groep pioniers. Vandaag bouwen we samen met winkels, distributeurs en partners aan een systeem waarin biologisch niet langer een alternatief is, maar de norm.</p>
+        <p>Geen water bij de wijn — wat goed is, hoeft niet onderhandeld te worden.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="producten">
+  <div class="container">
+    <div class="products-header fade-on-scroll">
+      <h2>Wat erop staat, zit erin.</h2>
+      <p>Niks meer, niks minder. 100% voedzaam, 0% onnodige toevoegingen.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card p1 fade-on-scroll">
+        <img src="assets/scraped/images/merken/horizon/coverMuur-min.png" alt="Horizon notenpasta collectie" loading="lazy" />
+        <span class="label">Horizon notenpasta</span>
+      </div>
+      <div class="product-card p2 fade-on-scroll">
+        <img src="assets/scraped/images/merken/horizon/horizonpasta/horPindakaas-min.png" alt="Horizon pindakaas" loading="lazy" />
+        <span class="label">Pindakaas</span>
+      </div>
+      <div class="product-card p3 fade-on-scroll">
+        <img src="assets/scraped/images/merken/horizon/horizonpasta/horAmandelPasta-min.png" alt="Horizon amandelpasta" loading="lazy" />
+        <span class="label">Amandelpasta</span>
+      </div>
+      <div class="product-card p4 fade-on-scroll">
+        <img src="assets/scraped/images/merken/horizon/horizonpasta/horCashewPasta-min.png" alt="Horizon cashewpasta" loading="lazy" />
+        <span class="label">Cashewpasta</span>
+      </div>
+      <div class="product-card p5 fade-on-scroll">
+        <img src="assets/scraped/images/merken/horizon/horizonpasta/horTahin-min.png" alt="Horizon tahin" loading="lazy" />
+        <span class="label">Tahin</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="values-sky">
+    <div class="container fade-on-scroll">
+      <h2>Vijf waarden. Eén koers.</h2>
+      <p>Waar we elke dag op bouwen — van IJsselstein tot het schap.</p>
+    </div>
+  </div>
+  <div class="values-grid">
+    <div class="value-item fade-on-scroll">
+      <div class="value-circle"><h3>Integer</h3></div>
+      <p class="value-desc">We doen wat we beloven en blijven trouw aan onze principes. Geen verborgen agenda's, geen loze claims.</p>
+    </div>
+    <div class="value-item fade-on-scroll">
+      <div class="value-circle green"><h3>Puur</h3></div>
+      <p class="value-desc">Onze liefde voor alles dat groeit en bloeit is net zo puur als onze droom. Die pure smaken hebben niet met gierigheid te maken.</p>
+    </div>
+    <div class="value-item fade-on-scroll">
+      <div class="value-circle"><h3>Autonoom</h3></div>
+      <p class="value-desc">We strijden voor onze eigen manier en idealen. We gaan niet gedachteloos mee met trends of hypes.</p>
+    </div>
+    <div class="value-item fade-on-scroll">
+      <div class="value-circle green"><h3>Earthed</h3></div>
+      <p class="value-desc">We zijn letterlijk en figuurlijk verbonden met de aarde. Bevlogen, maar met beide benen op de grond.</p>
+    </div>
+    <div class="value-item fade-on-scroll">
+      <div class="value-circle"><h3>Utopistisch</h3></div>
+      <p class="value-desc">We dromen groot. Echte verandering begint met idealen — en de vastberadenheid om ze waar te maken.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="brands" id="merken">
+  <div class="container">
+    <div class="brands-header fade-on-scroll">
+      <h2>Vier merken, één familie.</h2>
+      <p>Elk met een eigen karakter. Allemaal 100% biologisch.</p>
+    </div>
+    <div class="brands-grid">
+      <article class="brand-card fade-on-scroll">
+        <div class="brand-cover">
+          <img src="assets/scraped/images/merken/horizon/coverMuur-min.png" alt="Horizon assortiment" loading="lazy" />
+        </div>
+        <div class="brand-body">
+          <h3>Horizon</h3>
+          <p>Het breedste assortiment. Biologische noten, zaden, pasta's en stropen — zoals het hoort.</p>
+          <span class="brand-link">Zien wat we maken →</span>
+        </div>
+      </article>
+      <article class="brand-card fade-on-scroll">
+        <div class="brand-cover">
+          <img src="assets/scraped/images/merken/monki/monPotMuur-min.png" alt="Monki notenpasta" loading="lazy" />
+        </div>
+        <div class="brand-body">
+          <h3>Monki</h3>
+          <p>Notenpasta voor Europa. Direct van de boom, tot in de pot. Verder geen gedoe.</p>
+          <span class="brand-link">Zien wat we maken →</span>
+        </div>
+      </article>
+      <article class="brand-card fade-on-scroll">
+        <div class="brand-cover">
+          <img src="assets/scraped/images/merken/jori/FrontCover_T-min.png" alt="Jori pindakaas" loading="lazy" />
+        </div>
+        <div class="brand-body">
+          <h3>Jori</h3>
+          <p>Pindakaas. Geroosterd en gemalen. Niks meer. Roosteren, malen en klaar — lekker hè?</p>
+          <span class="brand-link">Zien wat we maken →</span>
+        </div>
+      </article>
+      <article class="brand-card fade-on-scroll">
+        <div class="brand-cover">
+          <img src="assets/scraped/images/merken/krekeltje/krekeltjeImage-min.png" alt="Krekeltje voor kinderen" loading="lazy" />
+        </div>
+        <div class="brand-body">
+          <h3>Krekeltje</h3>
+          <p>Voor kinderen en gezinnen. Puur genot — zonder verrassingen op het etiket.</p>
+          <span class="brand-link">Zien wat we maken →</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- B2B -->
+<section class="b2b" id="b2b">
+  <div class="container">
+    <div class="b2b-inner">
+      <h2 class="fade-on-scroll">Wil je ons assortiment voeren?</h2>
+      <p class="b2b-lead fade-on-scroll">We werken graag samen met partners die geloven dat biologisch de norm moet zijn — niet het alternatief.</p>
+      <div class="b2b-cols">
+        <div class="b2b-col fade-on-scroll">
+          <h3>Winkels</h3>
+          <p>Van natuurvoedingswinkel tot supermarkt. Wij denken mee over assortiment, schap en marge.</p>
+        </div>
+        <div class="b2b-col fade-on-scroll">
+          <h3>Distributeurs</h3>
+          <p>Nationaal en Europees. Betrouwbare levering vanuit IJsselstein, met echte mensen aan de lijn.</p>
+        </div>
+        <div class="b2b-col fade-on-scroll">
+          <h3>Food Service</h3>
+          <p>Horeca, catering en specialty. Grootverpakking en bulk voor wie dagelijks met kwaliteit werkt.</p>
+        </div>
+      </div>
+      <a href="mailto:info@horizonnatuurvoeding.nl" class="btn btn-brand">Praat met ons <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 78" aria-label="Horizon Natuurvoeding" role="img">
+          <path fill="currentColor" d="M36.16,77.77V21.69c0-4.06-2.84-6.5-9.75-6.5V4.63h37.79V15.19c-6.09,0-8.53,2.44-8.53,6.5v17.88h24.38V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h37.38V15.19c-6.09,0-9.35,2.44-9.35,6.5v56.07h-19.5v-26.41h-24.38v26.41h-19.5Z"/>
+          <path fill="currentColor" d="M127.59,77.77s-11.38-9.35-11.38-32.91S131.65,1.78,154,1.78s37.79,19.91,37.79,43.07-11.78,32.91-11.78,32.91h-18.69s8.94-5.69,8.94-32.91c0-15.85-2.84-31.69-16.25-31.69s-16.66,15.85-16.66,31.69c0,27.63,9.35,32.91,9.35,32.91h-19.1Z"/>
+          <path fill="currentColor" fill-rule="evenodd" d="M259.24,57.04c2.84,8.13,2.84,17.07,6.5,17.07,2.84,0,2.84-10.16,2.84-10.16h10.16s-.41,6.5-.81,9.75c-.41,2.84-1.22,4.06-1.22,4.06h-29.26s-2.03-3.66-3.25-12.6c-.41-4.06-1.22-9.35-3.25-11.78-2.03-2.03-7.72-2.03-13.41-2.03v26.41h-19.5V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h40.63c15.03,.41,28.85,7.72,28.85,21.94,0,13.41-14.22,19.1-18.28,19.91,4.88,3.25,6.91,6.5,8.53,10.57h0Zm-31.69-16.25V21.69s-.41-6.91,8.53-6.91,12.19,3.66,12.19,11.78c0,11.78-5.28,14.22-20.72,14.22h0Z"/>
+          <path fill="currentColor" d="M284.84,15.19V4.63h36.57V15.19c-6.5,0-8.53,2.44-8.53,6.5v56.07h-19.5V21.69c0-4.06-2.03-6.5-8.53-6.5h0Z"/>
+          <path fill="currentColor" d="M332.79,77.77s31.69-63.79,31.29-63.79c-21.54-1.22-24.38,13.41-23.97,19.91h-6.91V4.63h56.48v6.91l-32.51,66.23h14.63c8.13-2.44,12.19-14.63,12.19-21.13h7.31v21.13h-58.51Z"/>
+          <path fill="currentColor" d="M411.61,77.77s-11.38-9.35-11.38-32.91S415.68,1.78,438.03,1.78s37.79,19.91,37.79,43.07-11.78,32.91-11.78,32.91h-18.69s8.94-5.69,8.94-32.91c0-15.85-2.85-31.69-16.25-31.69s-16.66,15.85-16.66,31.69c0,27.63,9.34,32.91,9.34,32.91h-19.1Z"/>
+          <path fill="currentColor" d="M490.04,77.77V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h26.82l39.01,49.98V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h28.04V15.19c-6.5,0-8.53,2.44-8.53,6.5v56.07h-20.72l-35.35-47.14v47.14h-12.19Z"/>
+        </svg>
+      </div>
+      <p class="footer-tag">Samen bereiken we 'm wel.</p>
+      <div class="footer-bio">
+        <img src="assets/images/EUBio.jpg" alt="EU Biologisch" />
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Horizon Natuurvoeding · 100% biologisch sinds 1978</span>
+      <span>SKAL gecertificeerd · EU Bio</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Nav hide on scroll down, show on scroll up
+  const nav = document.getElementById('nav');
+  let lastY = window.scrollY;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    nav.classList.toggle('hidden', y > lastY && y > 80);
+    lastY = y;
+  }, { passive: true });
+
+  // Intersection Observer for fade-on-scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.fade-on-scroll').forEach((el) => io.observe(el));
+
+  // Smooth-anchor offset for sticky nav
+  document.querySelectorAll('a[href^="#"]').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (id.length < 2) return;
+      const el = document.querySelector(id);
+      if (!el) return;
+      e.preventDefault();
+      const y = el.getBoundingClientRect().top + window.scrollY - 72;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    });
+  });
+
+  // ——— SKY / ORB SYSTEEM ———
+  // Eén centraal object beheert de sky-gradient én de orb (zon/maan) positie.
+  // HERO ZON — grote, diffuse lichtpool die langzaam over de dag beweegt.
+  // De horizon-gradient zelf verandert NOOIT (vast blauw → lichtblauw).
+  // De zon geeft het "wow-moment" zonder te vechten met de typografie.
+  (function heroSun() {
+    const heroSky = document.querySelector('.hero-sky');
+    const canvas  = document.getElementById('heroOrbCanvas');
+    if (!heroSky || !canvas) return;
+    const ctx = canvas.getContext('2d');
+
+    // SunCalc library (via CDN)
+    const sunCalcScript = document.createElement('script');
+    sunCalcScript.src = 'https://cdn.jsdelivr.net/npm/suncalc@1.9.0/suncalc.min.js';
+    sunCalcScript.onload = () => initSun();
+    document.head.appendChild(sunCalcScript);
+
+    let sunriseSec, sunsetSec;
+
+    function initSun() {
+      updateSunTimes();
+      startAnimation();
+    }
+
+    function updateSunTimes() {
+      // Nederland: Utrecht (52.1° N, 5.1° E)
+      const today = new Date();
+      const times = SunCalc.getTimes(today, 52.1, 5.1);
+      sunriseSec = times.sunrise.getHours() * 3600 + times.sunrise.getMinutes() * 60;
+      sunsetSec = times.sunset.getHours() * 3600 + times.sunset.getMinutes() * 60;
+    }
+
+    // Positie op de dagboog. Dag = zonsopgang tot zonsondergang.
+    // Daarbuiten "parkeren" we de zon net buiten beeld.
+    let scrubberActive = false;
+    let overrideSec = null;
+
+    function tFromClock() {
+      if (!sunriseSec || !sunsetSec) return 0;
+      const nowSec = overrideSec !== null ? overrideSec : (new Date().getHours() * 3600 + new Date().getMinutes() * 60 + new Date().getSeconds());
+      const dayLengthSec = sunsetSec - sunriseSec;
+      return Math.max(0, Math.min(1, (nowSec - sunriseSec) / dayLengthSec));
+    }
+
+    function updateFromScrubber(minutes) {
+      overrideSec = minutes * 60;
+      const hours = Math.floor(minutes / 60);
+      const mins = minutes % 60;
+      document.getElementById('timeDisplay').textContent = `${String(hours).padStart(2, '0')}:${String(mins).padStart(2, '0')}`;
+      drawCelestialBody(tFromClock());
+      updateNightMode();
+    }
+
+    // Zet nacht-modus aan/uit gebaseerd op huidige tijd t.o.v. zonsondergang
+    function updateNightMode() {
+      if (!sunriseSec || !sunsetSec) return;
+      const nowSec = overrideSec !== null ? overrideSec : (new Date().getHours() * 3600 + new Date().getMinutes() * 60 + new Date().getSeconds());
+      const isNight = nowSec < sunriseSec || nowSec > sunsetSec;
+      if (isNight) {
+        heroSky.classList.add('night');
+        document.body.classList.add('night-sky');
+      } else {
+        heroSky.classList.remove('night');
+        document.body.classList.remove('night-sky');
+      }
+    }
+
+    function startAnimation() {
+      updateNightMode();
+      sweepToNow(); // rijdt langs de boog naar de huidige positie
+      setInterval(() => {
+        if (!scrubberActive) {
+          drawCelestialBody(tFromClock());
+          updateNightMode();
+        }
+      }, 60 * 1000);
+    }
+
+    // Bepaal of het dag of nacht is, en teken zon OF maan
+    function drawCelestialBody(t) {
+      if (!sunriseSec || !sunsetSec) return;
+      const now = new Date();
+      // Gebruik scrubber-override als die gezet is, anders echte tijd
+      const nowSec = overrideSec !== null
+        ? overrideSec
+        : (now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds());
+      const dayLengthSec = sunsetSec - sunriseSec;
+      const isDay = nowSec >= sunriseSec && nowSec <= sunsetSec;
+
+      const w = heroSky.offsetWidth  || window.innerWidth;
+      const h = heroSky.offsetHeight || window.innerHeight * 0.62;
+      if (canvas.width  !== w) canvas.width  = w;
+      if (canvas.height !== h) canvas.height = h;
+      ctx.clearRect(0, 0, w, h);
+
+      if (isDay) {
+        // ZON: rijst vanuit de horizon (links-onder) en daalt terug onder de horizon (rechts-onder)
+        const leftPct = 10 + 80 * t;
+        const topPct  = 100 - 85 * Math.sin(Math.PI * t);
+        const cx = w * (leftPct / 100);
+        const cy = h * (topPct  / 100);
+        const r = Math.min(w, h) * 1.17;
+
+        const grd = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
+        grd.addColorStop(0.00, 'rgba(255, 248, 210, 0.70)');
+        grd.addColorStop(0.12, 'rgba(255, 240, 180, 0.48)');
+        grd.addColorStop(0.30, 'rgba(255, 225, 140, 0.22)');
+        grd.addColorStop(0.60, 'rgba(255, 210, 110, 0.07)');
+        grd.addColorStop(1.00, 'rgba(255, 200,  90, 0)');
+        ctx.fillStyle = grd;
+        ctx.fillRect(0, 0, w, h);
+      } else {
+        // MAAN: rechts naar links gedurende de nacht
+        const totalNightSec = 86400 - dayLengthSec;
+        // Correcte positie: tel seconden verstreken since sunset, ook door middernacht heen
+        const elapsedSinceSet = nowSec >= sunsetSec
+          ? (nowSec - sunsetSec)
+          : (86400 - sunsetSec + nowSec); // voor zonsopgang (na middernacht)
+        const tNight = Math.max(0, Math.min(1, elapsedSinceSet / totalNightSec));
+
+        // Maan rijst vanuit de horizon (rechts-onder) en daalt terug onder de horizon (links-onder)
+        const leftPct = 90 - 80 * tNight;
+        const topPct  = 100 - 75 * Math.sin(Math.PI * tNight);
+        const cx = w * (leftPct / 100);
+        const cy = h * (topPct  / 100);
+        const r = Math.min(w, h) * 0.70;
+
+        // Pulsatie-animatie: zachte gloed die ademt
+        const pulsePhase = (nowSec % 6000) / 6000;
+        const pulseIntensity = 0.75 + 0.25 * Math.sin(Math.PI * 2 * pulsePhase);
+
+        // Maan wordt sterker naarmate die hoger aan de hemel staat
+        const moonStrength = Math.max(0.2, Math.sin(Math.PI * tNight));
+
+        const grd = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
+        grd.addColorStop(0.00, `rgba(240, 245, 255, ${0.65 * pulseIntensity * moonStrength})`);
+        grd.addColorStop(0.15, `rgba(220, 235, 250, ${0.40 * pulseIntensity * moonStrength})`);
+        grd.addColorStop(0.35, `rgba(200, 220, 245, ${0.18 * pulseIntensity * moonStrength})`);
+        grd.addColorStop(0.65, `rgba(180, 210, 240, ${0.05 * pulseIntensity * moonStrength})`);
+        grd.addColorStop(1.00, 'rgba(180, 210, 240, 0)');
+        ctx.fillStyle = grd;
+        ctx.fillRect(0, 0, w, h);
+      }
+    }
+
+    // Sweep-animatie bij page load: zon of maan rijdt langs de boog naar de huidige positie.
+    // Werkt via overrideSec zodat ook de maan-positie correct animeert.
+    let animRaf = null;
+    function sweepToNow() {
+      if (animRaf) cancelAnimationFrame(animRaf);
+
+      const now = new Date();
+      const nowSec = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+      const isDay  = nowSec >= sunriseSec && nowSec <= sunsetSec;
+
+      // Bereken hoeveel seconden er zijn verstreken in de huidige fase
+      let elapsedTarget;
+      if (isDay) {
+        elapsedTarget = nowSec - sunriseSec;              // seconden na zonsopgang
+      } else {
+        elapsedTarget = nowSec >= sunsetSec
+          ? nowSec - sunsetSec                            // avond: na zonsondergang
+          : 86400 - sunsetSec + nowSec;                  // nacht na middernacht
+      }
+
+      const DURATION = 3000; // 3 seconden sweep
+      const t0 = performance.now();
+      (function tick(nowMs) {
+        const p = Math.min((nowMs - t0) / DURATION, 1);
+        const e = 1 - Math.pow(1 - p, 2.5); // ease-out
+
+        // Zet overrideSec op het geïnterpoleerde tijdstip
+        if (isDay) {
+          overrideSec = sunriseSec + e * elapsedTarget;
+        } else {
+          let sec = sunsetSec + e * elapsedTarget;
+          if (sec >= 86400) sec -= 86400;
+          overrideSec = sec;
+        }
+
+        updateNightMode();
+        drawCelestialBody(tFromClock());
+
+        if (p < 1) {
+          animRaf = requestAnimationFrame(tick);
+        } else {
+          overrideSec = null; // laat echte tijd het overnemen
+          animRaf = null;
+          updateNightMode();
+          drawCelestialBody(tFromClock());
+        }
+      })(t0);
+    }
+
+    // Init + resize
+    window.addEventListener('resize', () => drawCelestialBody(tFromClock()), { passive: true });
+
+    // Time scrubber slider event listeners
+    // (CSS already handles all styling via !important rules)
+
+    const scrubber = document.getElementById('timeScrubber');
+    if (scrubber) {
+      scrubber.addEventListener('input', (e) => {
+        overrideSec = parseInt(e.target.value) * 60;
+        updateFromScrubber(parseInt(e.target.value));
+      });
+      scrubber.addEventListener('mousedown', () => { scrubberActive = true; });
+      scrubber.addEventListener('mouseup', () => { scrubberActive = false; overrideSec = null; });
+    }
+
+    // Draggable scrubber panel
+    const panel = document.getElementById('timeScrubberPanel');
+    const handle = panel && panel.querySelector('.drag-handle');
+    if (panel && handle) {
+      let dragging = false, ox = 0, oy = 0;
+      handle.addEventListener('mousedown', (e) => {
+        dragging = true;
+        const r = panel.getBoundingClientRect();
+        ox = e.clientX - r.left;
+        oy = e.clientY - r.top;
+        handle.style.cursor = 'grabbing';
+        e.preventDefault();
+      });
+      document.addEventListener('mousemove', (e) => {
+        if (!dragging) return;
+        panel.style.left = Math.max(0, e.clientX - ox) + 'px';
+        panel.style.top  = Math.max(0, e.clientY - oy) + 'px';
+      });
+      document.addEventListener('mouseup', () => {
+        dragging = false;
+        handle.style.cursor = 'grab';
+      });
+    }
+
+    // Elke minuut: herpositioneer (tenzij scrubber actief is)
+    setInterval(() => {
+      if (!scrubberActive) {
+        drawCelestialBody(tFromClock());
+        updateNightMode();
+      }
+    }, 60 * 1000);
+  })();
+</script>
+</body>
+</html>

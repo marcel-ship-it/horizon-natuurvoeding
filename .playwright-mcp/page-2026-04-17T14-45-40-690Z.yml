@@ -1,0 +1,241 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /index.php
+        - img [ref=e6]
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Over Ons" [ref=e10] [cursor=pointer]:
+            - /url: /pages/overOns/overOns.php
+            - button "Over Ons" [ref=e11]:
+              - text: Over Ons
+              - img [ref=e12]
+        - listitem [ref=e14]:
+          - link "Productie" [ref=e16] [cursor=pointer]:
+            - /url: /pages/productie/productie.php
+            - button "Productie" [ref=e17]:
+              - text: Productie
+              - img [ref=e18]
+        - listitem [ref=e20]:
+          - link "Merken" [ref=e22] [cursor=pointer]:
+            - /url: /pages/merken/
+            - button "Merken" [ref=e23]:
+              - text: Merken
+              - img [ref=e24]
+        - listitem [ref=e26]:
+          - link "Nieuw! Recepten" [ref=e27] [cursor=pointer]:
+            - /url: /recepten.php
+            - generic [ref=e28]: Nieuw!
+            - text: Recepten
+        - listitem [ref=e29]:
+          - link "Waar Te Koop" [ref=e30] [cursor=pointer]:
+            - /url: /pages/waarTeKoop/waarTeKoop.php
+        - listitem [ref=e31]:
+          - link "Nieuws" [ref=e32] [cursor=pointer]:
+            - /url: /pages/nieuws/index.php
+        - listitem [ref=e33]:
+          - link "Contact" [ref=e35] [cursor=pointer]:
+            - /url: /pages/contact/contact.php
+            - button "Contact" [ref=e36]:
+              - text: Contact
+              - img [ref=e37]
+        - listitem [ref=e39]:
+          - link [ref=e40] [cursor=pointer]:
+            - /url: /pages/productie/certs.php
+            - img [ref=e41]
+        - listitem [ref=e42]:
+          - button [ref=e44]:
+            - img [ref=e45]
+      - list:
+        - listitem [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49] [cursor=pointer]:
+              - text: Over Ons
+              - img [ref=e50]
+            - generic:
+              - link "Visie & Missie" [ref=e52] [cursor=pointer]:
+                - /url: /pages/overOns/overOns.php#misi-visie
+              - link "Ons Team" [ref=e53] [cursor=pointer]:
+                - /url: /pages/overOns/overOns.php#onsTeam
+              - link "Geschiedenis" [ref=e54] [cursor=pointer]:
+                - /url: /pages/overOns/overOns.php#geschiedenis
+              - link "Relaties" [ref=e55] [cursor=pointer]:
+                - /url: /pages/overOns/overOns.php#relaties
+        - listitem [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58] [cursor=pointer]:
+              - text: Productie
+              - img [ref=e59]
+            - generic:
+              - link "Notenpasta's" [ref=e61] [cursor=pointer]:
+                - /url: /pages/productie/productie.php
+              - link "Verpakken" [ref=e62] [cursor=pointer]:
+                - /url: /pages/productie/productie.php#v&a
+              - link "Food Ingredients" [ref=e63] [cursor=pointer]:
+                - /url: /pages/productie/productie.php#foodIngredients
+              - link "Kwaliteit" [ref=e64] [cursor=pointer]:
+                - /url: /pages/productie/productie.php#kwaliteit
+              - link "Certificering" [ref=e65] [cursor=pointer]:
+                - /url: /pages/productie/productie.php#certificering
+        - listitem [ref=e66]:
+          - generic [ref=e67]:
+            - generic [ref=e68] [cursor=pointer]:
+              - text: Merken
+              - img [ref=e69]
+            - generic:
+              - link "Onze Merken" [ref=e71] [cursor=pointer]:
+                - /url: /pages/merken/index.php
+              - link "Horizon" [ref=e72] [cursor=pointer]:
+                - /url: /pages/merken/horizon.php
+              - link "Monki" [ref=e73] [cursor=pointer]:
+                - /url: /pages/merken/monki.php
+              - link "Jori" [ref=e74] [cursor=pointer]:
+                - /url: /pages/merken//jori.php
+              - link "Krekeltje" [ref=e75] [cursor=pointer]:
+                - /url: /pages/merken/krekeltje.php
+        - listitem [ref=e76]:
+          - link "Nieuw! Recepten" [ref=e77] [cursor=pointer]:
+            - /url: /recepten.php
+            - generic [ref=e78]: Nieuw!
+            - text: Recepten
+        - listitem [ref=e79]:
+          - link "Waar Te Koop" [ref=e80] [cursor=pointer]:
+            - /url: /pages/waarTeKoop/waarTeKoop.php
+        - listitem [ref=e81]:
+          - link "Nieuws" [ref=e82] [cursor=pointer]:
+            - /url: /pages/nieuws/nieuws.php
+        - listitem [ref=e83]:
+          - generic [ref=e84]:
+            - generic [ref=e85] [cursor=pointer]:
+              - text: Contact
+              - img [ref=e86]
+            - generic:
+              - link "Contactformulier" [ref=e88] [cursor=pointer]:
+                - /url: /pages/contact/contact.php
+              - link "Vacatures" [ref=e89] [cursor=pointer]:
+                - /url: /pages/contact/vacatures.php
+        - listitem [ref=e90]:
+          - generic [ref=e91]:
+            - img [ref=e93] [cursor=pointer]
+            - generic:
+              - button "Nederlands" [ref=e95] [cursor=pointer]:
+                - img [ref=e96]
+                - text: Nederlands
+              - button "English" [ref=e97] [cursor=pointer]:
+                - img [ref=e98]
+                - text: English
+              - button "Deutsch" [ref=e99] [cursor=pointer]:
+                - img [ref=e100]
+                - text: Deutsch
+              - button "Español" [ref=e101] [cursor=pointer]:
+                - img [ref=e102]
+                - text: Español
+              - button "Français" [ref=e103] [cursor=pointer]:
+                - img [ref=e104]
+                - text: Français
+  - generic [ref=e105]:
+    - generic [ref=e106]:
+      - generic [ref=e107]:
+        - link [ref=e108] [cursor=pointer]:
+          - /url: horizon.php
+        - paragraph [ref=e110]: Notenpasta's, Stropen, Verpakte Noten, Zaden, Zuidvruchten
+      - generic [ref=e111]:
+        - link [ref=e112] [cursor=pointer]:
+          - /url: monki.php
+        - paragraph [ref=e114]: Notenpasta's
+      - generic [ref=e115]:
+        - link [ref=e116] [cursor=pointer]:
+          - /url: jori.php
+        - paragraph [ref=e118]: Notenpasta's
+      - generic [ref=e119]:
+        - link [ref=e120] [cursor=pointer]:
+          - /url: krekeltje.php
+        - paragraph [ref=e122]: Pindakaas
+    - paragraph [ref=e124]: Op het gebied van biologische noten, zaden en zuidvruchten heeft het merk Horizon een leidende marktpositie in de Benelux. In andere Europese landen speelt Monki een hoofdrol in het segment van de noten- en zadenpasta's. Jori en Krekeltje zijn onze pindakaas merken en zijn met name populair in Nederland.
+  - contentinfo [ref=e126]:
+    - generic [ref=e128]:
+      - generic [ref=e129]:
+        - heading "OVER ONS" [level=4] [ref=e130]
+        - list [ref=e131]:
+          - listitem [ref=e132]:
+            - link "VISIE & MISSIE" [ref=e133] [cursor=pointer]:
+              - /url: /pages/overOns/overOns.php
+          - listitem [ref=e134]:
+            - link "ONS TEAM" [ref=e135] [cursor=pointer]:
+              - /url: /pages/overOns/overOns.php#onsTeam
+          - listitem [ref=e136]:
+            - link "GESCHIEDENIS" [ref=e137] [cursor=pointer]:
+              - /url: /pages/overOns/overOns.php#geschiedenis
+          - listitem [ref=e138]:
+            - link "RELATIES" [ref=e139] [cursor=pointer]:
+              - /url: /pages/overOns/overOns.php#relaties
+      - generic [ref=e140]:
+        - heading "PRODUCTIE" [level=4] [ref=e141]
+        - list [ref=e142]:
+          - listitem [ref=e143]:
+            - link "NOTENPASTA'S" [ref=e144] [cursor=pointer]:
+              - /url: /pages/productie/productie.php
+          - listitem [ref=e145]:
+            - link "VERPAKKEN" [ref=e146] [cursor=pointer]:
+              - /url: /pages/productie/productie.php#v&a
+          - listitem [ref=e147]:
+            - link "FOOD INGREDIENTS" [ref=e148] [cursor=pointer]:
+              - /url: /pages/productie/productie.php#foodIngredients
+          - listitem [ref=e149]:
+            - link "KWALITEIT" [ref=e150] [cursor=pointer]:
+              - /url: /pages/productie/productie.php#kwaliteit
+          - listitem [ref=e151]:
+            - link "CERTIFICERING" [ref=e152] [cursor=pointer]:
+              - /url: /pages/productie/productie.php#certificering
+      - generic [ref=e153]:
+        - heading "MERKEN" [level=4] [ref=e154]
+        - list [ref=e155]:
+          - listitem [ref=e156]:
+            - link "HORIZON" [ref=e157] [cursor=pointer]:
+              - /url: /pages/merken/horizon.php
+          - listitem [ref=e158]:
+            - link "MONKI" [ref=e159] [cursor=pointer]:
+              - /url: /pages/merken/monki.php
+          - listitem [ref=e160]:
+            - link "JORI" [ref=e161] [cursor=pointer]:
+              - /url: /pages/merken/jori.php
+          - listitem [ref=e162]:
+            - link "KREKELTJE" [ref=e163] [cursor=pointer]:
+              - /url: /pages/merken/krekeltje.php
+      - generic [ref=e164]:
+        - link "WAAR TE KOOP" [ref=e165] [cursor=pointer]:
+          - /url: /pages/waarTeKoop/waarTeKoop.php
+          - heading "WAAR TE KOOP" [level=4] [ref=e166]
+        - list
+      - generic [ref=e167]:
+        - link "NIEUWS" [ref=e168] [cursor=pointer]:
+          - /url: /pages/nieuws/index.php
+          - heading "NIEUWS" [level=4] [ref=e169]
+        - list
+      - generic [ref=e170]:
+        - heading "CONTACT" [level=4] [ref=e171]
+        - list [ref=e172]:
+          - listitem [ref=e173]:
+            - link "CONTACT FORMULIER" [ref=e174] [cursor=pointer]:
+              - /url: /pages/contact/contact.php
+          - listitem [ref=e175]:
+            - link "VACATURES" [ref=e176] [cursor=pointer]:
+              - /url: /pages/contact/vacatures.php
+      - generic [ref=e177]:
+        - heading "VOLG ONS" [level=4] [ref=e178]
+        - generic [ref=e179]:
+          - link [ref=e180] [cursor=pointer]:
+            - /url: https://www.instagram.com/horizonnatuurvoeding/
+            - img [ref=e181]
+          - link [ref=e183] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/horizon-natuurvoeding-bv/
+            - img [ref=e184]
+      - generic [ref=e186]:
+        - heading "100% BIOLOGISCH" [level=4] [ref=e187]
+        - link [ref=e188] [cursor=pointer]:
+          - /url: /pages/productie/certs.php
+          - img [ref=e189]
+    - paragraph [ref=e191]:
+      - img [ref=e192]
+      - text: Horizon Natuurvoeding B.V. 2025

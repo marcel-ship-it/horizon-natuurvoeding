@@ -1,0 +1,341 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /index.php
+        - img [ref=e6]
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Over Ons" [ref=e10] [cursor=pointer]:
+            - /url: /pages/overOns/overOns.php
+            - button "Over Ons" [ref=e11]:
+              - text: Over Ons
+              - img [ref=e12]
+        - listitem [ref=e14]:
+          - link "Productie" [ref=e16] [cursor=pointer]:
+            - /url: /pages/productie/productie.php
+            - button "Productie" [ref=e17]:
+              - text: Productie
+              - img [ref=e18]
+        - listitem [ref=e20]:
+          - link "Merken" [ref=e22] [cursor=pointer]:
+            - /url: /pages/merken/
+            - button "Merken" [ref=e23]:
+              - text: Merken
+              - img [ref=e24]
+        - listitem [ref=e26]:
+          - link "Nieuw! Recepten" [ref=e27] [cursor=pointer]:
+            - /url: /recepten.php
+            - generic [ref=e28]: Nieuw!
+            - text: Recepten
+        - listitem [ref=e29]:
+          - link "Waar Te Koop" [ref=e30] [cursor=pointer]:
+            - /url: /pages/waarTeKoop/waarTeKoop.php
+        - listitem [ref=e31]:
+          - link "Nieuws" [ref=e32] [cursor=pointer]:
+            - /url: /pages/nieuws/index.php
+        - listitem [ref=e33]:
+          - link "Contact" [ref=e35] [cursor=pointer]:
+            - /url: /pages/contact/contact.php
+            - button "Contact" [ref=e36]:
+              - text: Contact
+              - img [ref=e37]
+        - listitem [ref=e39]:
+          - link [ref=e40] [cursor=pointer]:
+            - /url: /pages/productie/certs.php
+            - img [ref=e41]
+        - listitem [ref=e42]:
+          - button [ref=e44]:
+            - img [ref=e45]
+      - list:
+        - listitem [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49] [cursor=pointer]:
+              - text: Over Ons
+              - img [ref=e50]
+            - generic:
+              - link "Visie & Missie" [ref=e52] [cursor=pointer]:
+                - /url: /pages/overOns/overOns.php#misi-visie
+              - link "Ons Team" [ref=e53] [cursor=pointer]:
+                - /url: /pages/overOns/overOns.php#onsTeam
+              - link "Geschiedenis" [ref=e54] [cursor=pointer]:
+                - /url: /pages/overOns/overOns.php#geschiedenis
+              - link "Relaties" [ref=e55] [cursor=pointer]:
+                - /url: /pages/overOns/overOns.php#relaties
+        - listitem [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58] [cursor=pointer]:
+              - text: Productie
+              - img [ref=e59]
+            - generic:
+              - link "Notenpasta's" [ref=e61] [cursor=pointer]:
+                - /url: /pages/productie/productie.php
+              - link "Verpakken" [ref=e62] [cursor=pointer]:
+                - /url: /pages/productie/productie.php#v&a
+              - link "Food Ingredients" [ref=e63] [cursor=pointer]:
+                - /url: /pages/productie/productie.php#foodIngredients
+              - link "Kwaliteit" [ref=e64] [cursor=pointer]:
+                - /url: /pages/productie/productie.php#kwaliteit
+              - link "Certificering" [ref=e65] [cursor=pointer]:
+                - /url: /pages/productie/productie.php#certificering
+        - listitem [ref=e66]:
+          - generic [ref=e67]:
+            - generic [ref=e68] [cursor=pointer]:
+              - text: Merken
+              - img [ref=e69]
+            - generic:
+              - link "Onze Merken" [ref=e71] [cursor=pointer]:
+                - /url: /pages/merken/index.php
+              - link "Horizon" [ref=e72] [cursor=pointer]:
+                - /url: /pages/merken/horizon.php
+              - link "Monki" [ref=e73] [cursor=pointer]:
+                - /url: /pages/merken/monki.php
+              - link "Jori" [ref=e74] [cursor=pointer]:
+                - /url: /pages/merken//jori.php
+              - link "Krekeltje" [ref=e75] [cursor=pointer]:
+                - /url: /pages/merken/krekeltje.php
+        - listitem [ref=e76]:
+          - link "Nieuw! Recepten" [ref=e77] [cursor=pointer]:
+            - /url: /recepten.php
+            - generic [ref=e78]: Nieuw!
+            - text: Recepten
+        - listitem [ref=e79]:
+          - link "Waar Te Koop" [ref=e80] [cursor=pointer]:
+            - /url: /pages/waarTeKoop/waarTeKoop.php
+        - listitem [ref=e81]:
+          - link "Nieuws" [ref=e82] [cursor=pointer]:
+            - /url: /pages/nieuws/nieuws.php
+        - listitem [ref=e83]:
+          - generic [ref=e84]:
+            - generic [ref=e85] [cursor=pointer]:
+              - text: Contact
+              - img [ref=e86]
+            - generic:
+              - link "Contactformulier" [ref=e88] [cursor=pointer]:
+                - /url: /pages/contact/contact.php
+              - link "Vacatures" [ref=e89] [cursor=pointer]:
+                - /url: /pages/contact/vacatures.php
+        - listitem [ref=e90]:
+          - generic [ref=e91]:
+            - img [ref=e93] [cursor=pointer]
+            - generic:
+              - button "Nederlands" [ref=e95] [cursor=pointer]:
+                - img [ref=e96]
+                - text: Nederlands
+              - button "English" [ref=e97] [cursor=pointer]:
+                - img [ref=e98]
+                - text: English
+              - button "Deutsch" [ref=e99] [cursor=pointer]:
+                - img [ref=e100]
+                - text: Deutsch
+              - button "Español" [ref=e101] [cursor=pointer]:
+                - img [ref=e102]
+                - text: Español
+              - button "Français" [ref=e103] [cursor=pointer]:
+                - img [ref=e104]
+                - text: Français
+  - generic [ref=e113]:
+    - generic [ref=e115]:
+      - link "Merken" [ref=e116] [cursor=pointer]:
+        - /url: /pages/merken/index.php
+      - text: /Monki
+    - paragraph [ref=e119]: Monki notenpasta’s zijn in IJsselstein gemaakt van biologische pinda's, noten en zaden. Er zijn 15 soorten. Alle 100% notenpasta's zijn in consumentenverpakking van 330 gram. Van pindakaas en tahin zijn er ook potten van 650 gram. Het productieproces omvat de stappen roosteren, eventueel schonen en mengen, malen en afvullen. Bij de witte amandelpasta en witte cashewpasta vindt geen roosteren plaats. Monki biologische notenpasta’s zijn verkrijgbaar in natuurvoedingswinkels en andere speciaalzaken in verschillende landen in West Europa; voor deze landen zijn de etiketten van de juiste taal voorzien.
+  - generic [ref=e120]:
+    - heading "Notenpasta's" [level=1] [ref=e121]
+    - generic [ref=e122]:
+      - link "Amandelpasta 330g" [ref=e123] [cursor=pointer]:
+        - /url: monki/monNotenpastas/monAmandelPasta.html
+        - generic [ref=e126]: Amandelpasta 330g
+      - link "Witte Amandel- pasta 330g" [ref=e127] [cursor=pointer]:
+        - /url: monki/monNotenpastas/monAmandelPastaWit.html
+        - generic [ref=e130]:
+          - text: Witte Amandel-
+          - text: pasta 330g
+      - link "Cashewpasta 330g" [ref=e131] [cursor=pointer]:
+        - /url: monki/monNotenpastas/monCashewPasta.html
+        - generic [ref=e134]: Cashewpasta 330g
+      - link "Witte Cashew- pasta 330g" [ref=e135] [cursor=pointer]:
+        - /url: monki/monNotenpastas/monCashewPastaWit.html
+        - generic [ref=e138]:
+          - text: Witte Cashew-
+          - text: pasta 330g
+      - link "Gemengde notenpasta 330g" [ref=e139] [cursor=pointer]:
+        - /url: monki/monNotenpastas/monGemengdePasta.html
+        - generic [ref=e142]:
+          - text: Gemengde
+          - text: notenpasta 330g
+      - link "Hazelnoot- pasta 330g" [ref=e143] [cursor=pointer]:
+        - /url: monki/monNotenpastas/monHazelnootPasta.html
+        - generic [ref=e146]:
+          - text: Hazelnoot-
+          - text: pasta 330g
+      - link "Hazelrozijn- pasta 330g" [ref=e147] [cursor=pointer]:
+        - /url: monki/monNotenpastas/monHazelRozijnPasta.html
+        - generic [ref=e150]:
+          - text: Hazelrozijn-
+          - text: pasta 330g
+      - link "Pindakaas 330g" [ref=e151] [cursor=pointer]:
+        - /url: monki/monNotenpastas/monPindakaas.html
+        - generic [ref=e154]: Pindakaas 330g
+      - link "Pindakaas Crunchy 330g" [ref=e155] [cursor=pointer]:
+        - /url: monki/monNotenpastas/monPindakaasCrunchy.html
+        - generic [ref=e158]:
+          - text: Pindakaas
+          - text: Crunchy 330g
+      - link "Pindarozijn- pasta 330g" [ref=e159] [cursor=pointer]:
+        - /url: monki/monNotenpastas/monPindaRozijnPasta.html
+        - generic [ref=e162]:
+          - text: Pindarozijn-
+          - text: pasta 330g
+      - link "Pompoenpitten- pasta 330g" [ref=e163] [cursor=pointer]:
+        - /url: monki/monNotenpastas/monPompoenpitPasta.html
+        - generic [ref=e166]:
+          - text: Pompoenpitten-
+          - text: pasta 330g
+      - link "Tahin 330g" [ref=e167] [cursor=pointer]:
+        - /url: monki/monNotenpastas/monTahin.html
+        - generic [ref=e170]: Tahin 330g
+      - link "Witte Tahin 330g" [ref=e171] [cursor=pointer]:
+        - /url: monki/monNotenpastas/monTahinWit.html
+        - generic [ref=e174]: Witte Tahin 330g
+      - link "Tahin met Zeezout 330g" [ref=e175] [cursor=pointer]:
+        - /url: monki/monNotenpastas/monTahinZout.html
+        - generic [ref=e178]:
+          - text: Tahin met
+          - text: Zeezout 330g
+      - link "Zwarte Tahin 330g" [ref=e179] [cursor=pointer]:
+        - /url: monki/monNotenpastas/monTahinZwart.html
+        - generic [ref=e182]: Zwarte Tahin 330g
+      - link "Zonnebloem- pasta 330g" [ref=e183] [cursor=pointer]:
+        - /url: monki/monNotenpastas/monZonnebloemPasta.html
+        - generic [ref=e186]:
+          - text: Zonnebloem-
+          - text: pasta 330g
+      - link "3 Notenpasta 330g" [ref=e187] [cursor=pointer]:
+        - /url: monki/monNotenpastas/mon3NotenPasta.html
+        - generic [ref=e190]:
+          - text: 3 Notenpasta
+          - text: 330g
+      - link "4 Notenpasta 330g" [ref=e191] [cursor=pointer]:
+        - /url: monki/monNotenpastas/mon4NotenPasta.html
+        - generic [ref=e194]:
+          - text: 4 Notenpasta
+          - text: 330g
+    - generic [ref=e195]:
+      - link "Pindakaas 650g" [ref=e196] [cursor=pointer]:
+        - /url: monki/monNotenpastas/650/monPindakaas650.html
+        - generic [ref=e199]: Pindakaas 650g
+      - link "Pindakaas Crunchy 650g" [ref=e200] [cursor=pointer]:
+        - /url: monki/monNotenpastas/650/monPindakaasCrunchy650.html
+        - generic [ref=e203]:
+          - text: Pindakaas
+          - text: Crunchy 650g
+      - link "Tahin 650g" [ref=e204] [cursor=pointer]:
+        - /url: monki/monNotenpastas/650/monTahin650.html
+        - generic [ref=e207]: Tahin 650g
+      - link "Tahin met Zeezout 650g" [ref=e208] [cursor=pointer]:
+        - /url: monki/monNotenpastas/650/monTahinZout650.html
+        - generic [ref=e211]:
+          - text: Tahin met
+          - text: Zeezout 650g
+    - generic [ref=e212]:
+      - link "Pecanpasta 175g" [ref=e213] [cursor=pointer]:
+        - /url: monki/monNotenpastas/175/monPecanPasta.html
+        - generic [ref=e216]: Pecanpasta 175g
+      - link "Pistachepasta 175g" [ref=e217] [cursor=pointer]:
+        - /url: monki/monNotenpastas/175/monPistachePasta.html
+        - generic [ref=e220]: Pistachepasta 175g
+      - link "Pijnboompitten- Pasta 175g" [ref=e221] [cursor=pointer]:
+        - /url: monki/monNotenpastas/175/monPijnboomPit.html
+        - generic [ref=e224]:
+          - text: Pijnboompitten-
+          - text: Pasta 175g
+      - link "Zwarte Tahin 175g" [ref=e225] [cursor=pointer]:
+        - /url: monki/monNotenpastas/175/monTahinZwart175.html
+        - generic [ref=e228]: Zwarte Tahin 175g
+  - contentinfo [ref=e231]:
+    - generic [ref=e233]:
+      - generic [ref=e234]:
+        - heading "OVER ONS" [level=4] [ref=e235]
+        - list [ref=e236]:
+          - listitem [ref=e237]:
+            - link "VISIE & MISSIE" [ref=e238] [cursor=pointer]:
+              - /url: /pages/overOns/overOns.php
+          - listitem [ref=e239]:
+            - link "ONS TEAM" [ref=e240] [cursor=pointer]:
+              - /url: /pages/overOns/overOns.php#onsTeam
+          - listitem [ref=e241]:
+            - link "GESCHIEDENIS" [ref=e242] [cursor=pointer]:
+              - /url: /pages/overOns/overOns.php#geschiedenis
+          - listitem [ref=e243]:
+            - link "RELATIES" [ref=e244] [cursor=pointer]:
+              - /url: /pages/overOns/overOns.php#relaties
+      - generic [ref=e245]:
+        - heading "PRODUCTIE" [level=4] [ref=e246]
+        - list [ref=e247]:
+          - listitem [ref=e248]:
+            - link "NOTENPASTA'S" [ref=e249] [cursor=pointer]:
+              - /url: /pages/productie/productie.php
+          - listitem [ref=e250]:
+            - link "VERPAKKEN" [ref=e251] [cursor=pointer]:
+              - /url: /pages/productie/productie.php#v&a
+          - listitem [ref=e252]:
+            - link "FOOD INGREDIENTS" [ref=e253] [cursor=pointer]:
+              - /url: /pages/productie/productie.php#foodIngredients
+          - listitem [ref=e254]:
+            - link "KWALITEIT" [ref=e255] [cursor=pointer]:
+              - /url: /pages/productie/productie.php#kwaliteit
+          - listitem [ref=e256]:
+            - link "CERTIFICERING" [ref=e257] [cursor=pointer]:
+              - /url: /pages/productie/productie.php#certificering
+      - generic [ref=e258]:
+        - heading "MERKEN" [level=4] [ref=e259]
+        - list [ref=e260]:
+          - listitem [ref=e261]:
+            - link "HORIZON" [ref=e262] [cursor=pointer]:
+              - /url: /pages/merken/horizon.php
+          - listitem [ref=e263]:
+            - link "MONKI" [ref=e264] [cursor=pointer]:
+              - /url: /pages/merken/monki.php
+          - listitem [ref=e265]:
+            - link "JORI" [ref=e266] [cursor=pointer]:
+              - /url: /pages/merken/jori.php
+          - listitem [ref=e267]:
+            - link "KREKELTJE" [ref=e268] [cursor=pointer]:
+              - /url: /pages/merken/krekeltje.php
+      - generic [ref=e269]:
+        - link "WAAR TE KOOP" [ref=e270] [cursor=pointer]:
+          - /url: /pages/waarTeKoop/waarTeKoop.php
+          - heading "WAAR TE KOOP" [level=4] [ref=e271]
+        - list
+      - generic [ref=e272]:
+        - link "NIEUWS" [ref=e273] [cursor=pointer]:
+          - /url: /pages/nieuws/index.php
+          - heading "NIEUWS" [level=4] [ref=e274]
+        - list
+      - generic [ref=e275]:
+        - heading "CONTACT" [level=4] [ref=e276]
+        - list [ref=e277]:
+          - listitem [ref=e278]:
+            - link "CONTACT FORMULIER" [ref=e279] [cursor=pointer]:
+              - /url: /pages/contact/contact.php
+          - listitem [ref=e280]:
+            - link "VACATURES" [ref=e281] [cursor=pointer]:
+              - /url: /pages/contact/vacatures.php
+      - generic [ref=e282]:
+        - heading "VOLG ONS" [level=4] [ref=e283]
+        - generic [ref=e284]:
+          - link [ref=e285] [cursor=pointer]:
+            - /url: https://www.instagram.com/horizonnatuurvoeding/
+            - img [ref=e286]
+          - link [ref=e288] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/horizon-natuurvoeding-bv/
+            - img [ref=e289]
+      - generic [ref=e291]:
+        - heading "100% BIOLOGISCH" [level=4] [ref=e292]
+        - link [ref=e293] [cursor=pointer]:
+          - /url: /pages/productie/certs.php
+          - img [ref=e294]
+    - paragraph [ref=e296]:
+      - img [ref=e297]
+      - text: Horizon Natuurvoeding B.V. 2025
