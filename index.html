@@ -8,12 +8,35 @@
 <link rel="icon" type="image/png" href="assets/images/FaviconRound.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet" />
+
+<template id="__bundler_thumbnail" data-bg-color="#009cdc">
+  <svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sky -->
+    <rect width="1200" height="280" fill="#009cdc"/>
+    <!-- Earth -->
+    <rect y="280" width="1200" height="120" fill="#fff0d8"/>
+    <!-- HORIZON wordmark silhouette -->
+    <rect x="200" y="80" width="800" height="80" rx="4" fill="#fff0d8" opacity="0.9"/>
+    <rect x="300" y="180" width="600" height="70" rx="4" fill="#fff0d8" opacity="0.9"/>
+    <rect x="380" y="260" width="440" height="70" rx="4" fill="#fff0d8" opacity="0.6"/>
+    <!-- Horizon line -->
+    <line x1="0" y1="280" x2="1200" y2="280" stroke="#b8e8f5" stroke-width="2"/>
+  </svg>
+</template>
 <style>
+  @font-face {
+    font-family: 'Clarendon';
+    src: url('assets/fonts/ClarendonExtBolExtNar.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+
   :root {
     --color-blue: #009cdc;
     --color-cream: #fff0d8;
-    --color-navy: #009cdc;
+    --color-navy: #009cdc; /* alias voor --color-blue; gebruik voor brand-blauwe vlakken */
     --color-sky: #b8e8f5;
     --color-green: #60d553;
     --horizon-gradient: linear-gradient(180deg, #fff0d8 0%, #b8e8f5 45%, #009cdc 100%);
@@ -50,10 +73,10 @@
   button { font-family: inherit; cursor: pointer; border: none; background: none; }
 
   h1, h2, h3, h4 {
-    font-family: 'Zilla Slab', Georgia, serif;
-    font-weight: 900;
+    font-family: 'Clarendon', 'Zilla Slab', Georgia, serif;
+    font-weight: 800;
     line-height: 1;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
     text-transform: uppercase;
   }
 
@@ -111,8 +134,8 @@
   .nav-logo-sub {
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
-    font-size: clamp(6px, 0.85vw, 9px);
-    letter-spacing: 0.33em;
+    font-size: 8px;
+    letter-spacing: 0.33em; /* brandbook: tracking 330 = 330/1000em = 0.33em */
     text-transform: uppercase;
     color: #009cdc;
     line-height: 1;
@@ -231,7 +254,7 @@
      De harde cut zit op de overgang sky → earth. */
   .hero-sky {
     flex: 1;
-    min-height: 62vh;
+    min-height: 68vh;
     position: relative;
     overflow: visible;
     display: flex;
@@ -247,12 +270,14 @@
     background: linear-gradient(180deg, #0c1e38 0%, #1a3a52 45%, #2d5a7b 78%, #3d6b92 100%);
   }
 
-  /* EARTH ZONE — vast crème, harde cut met sky erboven */
+  /* EARTH ZONE — vast crème, harde cut met sky erboven.
+     justify-content: space-between centreert de missie-tekst automatisch
+     in de ruimte tussen de horizon en de CTA-knop. */
   .hero-earth {
     background: var(--color-cream);
     position: relative;
-    margin-top: -2.85rem;
-    padding-top: calc(var(--s2) + 2.85rem);
+    margin-top: -4rem;
+    padding-top: calc(var(--s2) + 4rem);
     padding-bottom: var(--s5);
     padding-left: var(--s3);
     padding-right: var(--s3);
@@ -262,7 +287,7 @@
     gap: var(--s4);
     z-index: 2;
   }
-  /* MISSIE BLOK */
+  /* MISSIE BLOK — exact gecentreerd tussen horizon en CTA via space-between */
   .hero-missie {
     text-align: center;
     opacity: 0;
@@ -270,13 +295,16 @@
   }
   .hero-missie-statement {
     display: block;
-    font-family: 'Zilla Slab', Georgia, serif;
-    font-weight: 900;
+    font-family: 'Clarendon', 'Zilla Slab', Georgia, serif;
+    font-weight: 800;
     font-size: clamp(1.4rem, 3.5vw, 3rem);
     line-height: 1;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     text-transform: uppercase;
     color: var(--color-blue);
+    text-align: center;
+    padding: 5px 0 10px;
+  }
   }
 
   /* Geen extra horizonlijn nodig — de overgang sky/earth IS de horizon.
@@ -328,14 +356,13 @@
 
   /* HEADLINE — all three lines */
   .hero-hl-line {
-    font-family: 'Zilla Slab', Georgia, serif;
-    font-weight: 900;
-    font-size: clamp(3.4rem, 10.5vw, 9.5rem);
-    line-height: 1;
-    letter-spacing: -0.025em;
+    font-family: 'Clarendon', 'Zilla Slab', Georgia, serif;
+    font-weight: 800;
+    font-size: clamp(3.4rem, 12vw, 11rem);
+    line-height: 1.1;
+    letter-spacing: 0;
     text-transform: uppercase;
     text-align: center;
-    /* overflow: hidden op de outer container, clip op inner .w wrapper */
     overflow: hidden;
     padding: 0.05em 0 0.02em;
   }
@@ -423,9 +450,9 @@
     z-index: 2;
   }
 
-  /* TIME SCRUBBER — dev-only slider */
+  /* TIME SCRUBBER — dev-only slider (verborgen; press Shift+T om te tonen) */
   .time-scrubber {
-    display: flex !important;
+    display: none !important;
     position: fixed !important;
     background: #000 !important;
     padding: 16px 24px !important;
@@ -491,10 +518,9 @@
 
   /* ——— STATS / IMPACT ——— */
   .stats {
-    background: linear-gradient(180deg, #009cdc 0%, #7ed0f0 100%);
+    background: var(--color-blue);
     color: var(--color-cream);
-    padding: var(--s7) var(--s3);
-    margin-top: 0;
+    padding: var(--s7) 0;
   }
   .stats-grid {
     display: grid;
@@ -503,14 +529,15 @@
     text-align: center;
   }
   .stat-num {
-    font-family: 'Zilla Slab', Georgia, serif;
-    font-weight: 900;
-    font-size: clamp(3.5rem, 7vw, 6rem);
+    font-family: 'Clarendon', 'Zilla Slab', Georgia, serif;
+    font-weight: 800;
+    font-size: clamp(2.2rem, 4.5vw, 4rem);
     line-height: 0.95;
     color: var(--color-cream);
     text-transform: uppercase;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     margin-bottom: var(--s2);
+    white-space: nowrap;
   }
   .stat-label {
     font-size: 1rem;
@@ -524,9 +551,8 @@
 
   /* ——— QUOTE / OVER ONS ——— */
   .quote {
-    padding: var(--s8) var(--s3);
-    background: linear-gradient(180deg, #7ed0f0 0%, var(--color-cream) 15%, var(--color-cream) 100%);
-    margin-top: 0;
+    padding: var(--s8) 0;
+    background: var(--color-cream);
   }
   .quote-grid {
     display: grid;
@@ -535,13 +561,13 @@
     align-items: center;
   }
   .quote-big {
-    font-family: 'Zilla Slab', Georgia, serif;
-    font-weight: 700;
+    font-family: 'Clarendon', 'Zilla Slab', Georgia, serif;
+    font-weight: 800;
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     line-height: 1.05;
     color: var(--color-navy);
     text-transform: uppercase;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
   }
   .quote-big::before {
     content: '"';
@@ -563,10 +589,9 @@
 
   /* ——— PRODUCT GRID ——— */
   .products {
-    padding: var(--s8) var(--s3);
-    background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-cream) 85%, #e8f7fb 100%);
-    margin-top: 0;
-    border-top: none;
+    padding: var(--s8) 0;
+    background: var(--color-cream);
+    border-top: 1px solid rgba(0, 58, 92, 0.08);
   }
   .products-header {
     text-align: center;
@@ -640,11 +665,10 @@
   .values {
     background: var(--color-cream);
     position: relative;
-    margin-top: 0;
   }
   .values-sky {
-    background: linear-gradient(180deg, #e8f7fb 0%, #4cb8e0 50%, #fff0d8 50%, #fff0d8 100%);
-    padding: var(--s8) var(--s3) calc(var(--circle-size) / 2 + var(--s5));
+    background: var(--color-blue);
+    padding: var(--s8) 0 calc(var(--circle-size) / 2 + var(--s5));
     text-align: center;
   }
   .values-sky h2 {
@@ -666,7 +690,6 @@
     max-width: var(--maxw);
     margin: calc(var(--circle-size) / -2) auto 0;
     padding: 0 var(--s3) var(--s8);
-    background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-cream) 90%, #e8f7fb 100%);
   }
   .value-item {
     display: flex;
@@ -715,9 +738,8 @@
 
   /* ——— BRANDS ——— */
   .brands {
-    background: linear-gradient(180deg, #e8f7fb 0%, #b8d9ed 15%, #009cdc 30%, #3ab6e4 100%);
-    padding: var(--s8) var(--s3);
-    margin-top: 0;
+    background: var(--color-navy);
+    padding: var(--s8) 0;
   }
   .brands-header {
     text-align: center;
@@ -801,9 +823,8 @@
 
   /* ——— B2B ——— */
   .b2b {
-    background: linear-gradient(180deg, #3ab6e4 0%, #1fa8d8 50%, #009cdc 100%);
-    padding: var(--s8) var(--s3);
-    margin-top: 0;
+    background: linear-gradient(180deg, var(--color-sky) 0%, var(--color-blue) 100%);
+    padding: var(--s8) 0;
     position: relative;
     overflow: hidden;
   }
@@ -857,41 +878,58 @@
   .footer {
     background: var(--color-navy);
     color: var(--color-cream);
-    padding: var(--s7) 0 var(--s5);
+    padding: var(--s7) 0 var(--s4);
     text-align: center;
   }
   .footer-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+    align-items: start;
+  }
+  /* Footer logo kolom — links uitgelijnd */
+  .footer-grid > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--s2);
+  }
+  .footer-logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0;
-    margin-bottom: var(--s6);
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    gap: 4px;
+    color: var(--color-cream);
   }
   .footer-logo svg {
-    height: 48px;
-    width: auto;
-    color: var(--color-cream);
-    margin-bottom: var(--s1);
     display: block;
+    height: 32px;
+    width: auto;
   }
+  /* Footer-tag: logo-onderregel stijl (DM Sans Medium, gespatieerd, klein) */
   .footer-tag {
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    line-height: 1.15;
+    font-size: 8px;
     letter-spacing: 0.33em;
-    margin-bottom: var(--s4);
+    text-transform: uppercase;
+    line-height: 1;
     color: var(--color-cream);
+    opacity: 0.75;
+    margin: 0;
+    white-space: nowrap;
+  }
+  .footer-bio {
+    margin-top: var(--s4);
+    opacity: 0.75;
+    text-align: right;
   }
   .footer-bio img {
-    height: 48px;
+    height: 32px;
     width: auto;
-    margin: 0 auto;
-    display: block;
+    display: inline-block;
+  }
   }
   .footer h4 {
     font-family: 'DM Sans', sans-serif;
@@ -910,18 +948,17 @@
   }
   .footer a:hover { opacity: 1; color: var(--color-sky); }
   .footer-bottom {
-    padding-top: var(--s4);
-    border-top: 1px solid rgba(250, 240, 220, 0.15);
+    padding-top: var(--s3);
+    border-top: 1px solid rgba(250, 240, 220, 0.12);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: var(--s3);
-    font-size: 0.82rem;
-    opacity: 0.65;
+    gap: var(--s2);
+    font-size: 0.85rem;
+    opacity: 0.6;
   }
   @media (max-width: 800px) {
-    .footer-grid { max-width: 100%; }
-    .footer-bottom { gap: var(--s2); }
+    .footer-grid { grid-template-columns: 1fr; gap: var(--s4); }
   }
 
   /* ——— SCROLL REVEAL ——— */
@@ -951,7 +988,7 @@
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo-hn" aria-label="Horizon Natuurvoeding">
+    <a href="#" class="nav-logo-hn logo-lockup" aria-label="Horizon Natuurvoeding">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 78" aria-hidden="true" focusable="false">
         <path fill="currentColor" d="M36.16,77.77V21.69c0-4.06-2.84-6.5-9.75-6.5V4.63h37.79V15.19c-6.09,0-8.53,2.44-8.53,6.5v17.88h24.38V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h37.38V15.19c-6.09,0-9.35,2.44-9.35,6.5v56.07h-19.5v-26.41h-24.38v26.41h-19.5Z"/>
         <path fill="currentColor" d="M127.59,77.77s-11.38-9.35-11.38-32.91S131.65,1.78,154,1.78s37.79,19.91,37.79,43.07-11.78,32.91-11.78,32.91h-18.69s8.94-5.69,8.94-32.91c0-15.85-2.84-31.69-16.25-31.69s-16.66,15.85-16.66,31.69c0,27.63,9.35,32.91,9.35,32.91h-19.1Z"/>
@@ -1000,7 +1037,7 @@
   <!-- EARTH — missie + CTAs -->
   <div class="hero-earth">
     <div class="hero-missie">
-      <span class="hero-missie-statement">100% Biologisch — voor 100% van iedereen</span>
+      <span class="hero-missie-statement">100% Biologisch<br>voor 100% van iedereen</span>
     </div>
 
     <div class="hero-cta">
@@ -1198,20 +1235,31 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-logo">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 78" aria-label="Horizon Natuurvoeding" role="img">
-          <path fill="currentColor" d="M36.16,77.77V21.69c0-4.06-2.84-6.5-9.75-6.5V4.63h37.79V15.19c-6.09,0-8.53,2.44-8.53,6.5v17.88h24.38V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h37.38V15.19c-6.09,0-9.35,2.44-9.35,6.5v56.07h-19.5v-26.41h-24.38v26.41h-19.5Z"/>
-          <path fill="currentColor" d="M127.59,77.77s-11.38-9.35-11.38-32.91S131.65,1.78,154,1.78s37.79,19.91,37.79,43.07-11.78,32.91-11.78,32.91h-18.69s8.94-5.69,8.94-32.91c0-15.85-2.84-31.69-16.25-31.69s-16.66,15.85-16.66,31.69c0,27.63,9.35,32.91,9.35,32.91h-19.1Z"/>
-          <path fill="currentColor" fill-rule="evenodd" d="M259.24,57.04c2.84,8.13,2.84,17.07,6.5,17.07,2.84,0,2.84-10.16,2.84-10.16h10.16s-.41,6.5-.81,9.75c-.41,2.84-1.22,4.06-1.22,4.06h-29.26s-2.03-3.66-3.25-12.6c-.41-4.06-1.22-9.35-3.25-11.78-2.03-2.03-7.72-2.03-13.41-2.03v26.41h-19.5V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h40.63c15.03,.41,28.85,7.72,28.85,21.94,0,13.41-14.22,19.1-18.28,19.91,4.88,3.25,6.91,6.5,8.53,10.57h0Zm-31.69-16.25V21.69s-.41-6.91,8.53-6.91,12.19,3.66,12.19,11.78c0,11.78-5.28,14.22-20.72,14.22h0Z"/>
-          <path fill="currentColor" d="M284.84,15.19V4.63h36.57V15.19c-6.5,0-8.53,2.44-8.53,6.5v56.07h-19.5V21.69c0-4.06-2.03-6.5-8.53-6.5h0Z"/>
-          <path fill="currentColor" d="M332.79,77.77s31.69-63.79,31.29-63.79c-21.54-1.22-24.38,13.41-23.97,19.91h-6.91V4.63h56.48v6.91l-32.51,66.23h14.63c8.13-2.44,12.19-14.63,12.19-21.13h7.31v21.13h-58.51Z"/>
-          <path fill="currentColor" d="M411.61,77.77s-11.38-9.35-11.38-32.91S415.68,1.78,438.03,1.78s37.79,19.91,37.79,43.07-11.78,32.91-11.78,32.91h-18.69s8.94-5.69,8.94-32.91c0-15.85-2.85-31.69-16.25-31.69s-16.66,15.85-16.66,31.69c0,27.63,9.34,32.91,9.34,32.91h-19.1Z"/>
-          <path fill="currentColor" d="M490.04,77.77V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h26.82l39.01,49.98V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h28.04V15.19c-6.5,0-8.53,2.44-8.53,6.5v56.07h-20.72l-35.35-47.14v47.14h-12.19Z"/>
-        </svg>
+      <div>
+        <div class="footer-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 78" aria-label="Horizon Natuurvoeding" role="img">
+            <path fill="currentColor" d="M36.16,77.77V21.69c0-4.06-2.84-6.5-9.75-6.5V4.63h37.79V15.19c-6.09,0-8.53,2.44-8.53,6.5v17.88h24.38V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h37.38V15.19c-6.09,0-9.35,2.44-9.35,6.5v56.07h-19.5v-26.41h-24.38v26.41h-19.5Z"/>
+            <path fill="currentColor" d="M127.59,77.77s-11.38-9.35-11.38-32.91S131.65,1.78,154,1.78s37.79,19.91,37.79,43.07-11.78,32.91-11.78,32.91h-18.69s8.94-5.69,8.94-32.91c0-15.85-2.84-31.69-16.25-31.69s-16.66,15.85-16.66,31.69c0,27.63,9.35,32.91,9.35,32.91h-19.1Z"/>
+            <path fill="currentColor" fill-rule="evenodd" d="M259.24,57.04c2.84,8.13,2.84,17.07,6.5,17.07,2.84,0,2.84-10.16,2.84-10.16h10.16s-.41,6.5-.81,9.75c-.41,2.84-1.22,4.06-1.22,4.06h-29.26s-2.03-3.66-3.25-12.6c-.41-4.06-1.22-9.35-3.25-11.78-2.03-2.03-7.72-2.03-13.41-2.03v26.41h-19.5V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h40.63c15.03,.41,28.85,7.72,28.85,21.94,0,13.41-14.22,19.1-18.28,19.91,4.88,3.25,6.91,6.5,8.53,10.57h0Zm-31.69-16.25V21.69s-.41-6.91,8.53-6.91,12.19,3.66,12.19,11.78c0,11.78-5.28,14.22-20.72,14.22h0Z"/>
+            <path fill="currentColor" d="M284.84,15.19V4.63h36.57V15.19c-6.5,0-8.53,2.44-8.53,6.5v56.07h-19.5V21.69c0-4.06-2.03-6.5-8.53-6.5h0Z"/>
+            <path fill="currentColor" d="M332.79,77.77s31.69-63.79,31.29-63.79c-21.54-1.22-24.38,13.41-23.97,19.91h-6.91V4.63h56.48v6.91l-32.51,66.23h14.63c8.13-2.44,12.19-14.63,12.19-21.13h7.31v21.13h-58.51Z"/>
+            <path fill="currentColor" d="M411.61,77.77s-11.38-9.35-11.38-32.91S415.68,1.78,438.03,1.78s37.79,19.91,37.79,43.07-11.78,32.91-11.78,32.91h-18.69s8.94-5.69,8.94-32.91c0-15.85-2.85-31.69-16.25-31.69s-16.66,15.85-16.66,31.69c0,27.63,9.34,32.91,9.34,32.91h-19.1Z"/>
+            <path fill="currentColor" d="M490.04,77.77V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h26.82l39.01,49.98V21.69c0-4.06-2.03-6.5-8.53-6.5V4.63h28.04V15.19c-6.5,0-8.53,2.44-8.53,6.5v56.07h-20.72l-35.35-47.14v47.14h-12.19Z"/>
+          </svg>
+          <span class="nav-logo-sub" style="color:var(--color-cream);">Samen bereiken we 'm wel.</span>
+        </div>
+        
       </div>
-      <p class="footer-tag">Samen bereiken we 'm wel.</p>
-      <div class="footer-bio">
-        <img src="assets/images/EUBio.jpg" alt="EU Biologisch" />
+      <div>
+        <h4>Bezoek</h4>
+        <p>Horizon Natuurvoeding<br />IJsselstein, Nederland</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>
+          <a href="mailto:info@horizonnatuurvoeding.nl">info@horizonnatuurvoeding.nl</a><br />
+          <a href="tel:+31306887730">+31 (0)30 688 77 30</a>
+        </p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -1224,6 +1272,73 @@
 <script>
   // Year
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ——— HORIZON CUT: meet de werkelijke positie van "WE 'M WEL." en zet
+  // de cream aarde exact halverwege de letters — werkt op elk schermformaat.
+  function adjustHorizonCut() {
+    const lastLine = document.querySelector('.hl-wemwel');
+    const heroEarth = document.querySelector('.hero-earth');
+    if (!lastLine || !heroEarth) return;
+
+    const lineRect = lastLine.getBoundingClientRect();
+    const earthRect = heroEarth.getBoundingClientRect();
+
+    // Gewenste bovenkant van earth = baseline van de laatste tekstlijn
+    // (serifs raken de aarde, letters staan OP de horizon — zoals in het logo)
+    const targetTop = lineRect.top + lineRect.height * 0.76;
+    const currentTop = earthRect.top;
+    const diff = currentTop - targetTop;
+
+    const currentMargin = parseFloat(heroEarth.style.marginTop) || -64;
+    const newMargin = currentMargin - diff;
+
+    heroEarth.style.marginTop = newMargin + 'px';
+    heroEarth.style.paddingTop = `calc(var(--s2) + ${-newMargin}px)`;
+
+    // Centreer missie-tekst exact tussen de horizon en de CTA-knop
+    const missieEl = heroEarth.querySelector('.hero-missie');
+    const ctaEl    = heroEarth.querySelector('.hero-cta');
+    if (missieEl && ctaEl) {
+      missieEl.style.marginTop = '0';
+      requestAnimationFrame(() => {
+        const missieRect = missieEl.getBoundingClientRect();
+        const ctaRect    = ctaEl.getBoundingClientRect();
+        // Beschikbare ruimte: van horizon-lijn tot bovenkant CTA
+        const available     = ctaRect.top - targetTop;
+        // Gewenste positie: missie gecentreerd in die ruimte
+        const desiredTop    = targetTop + (available - missieRect.height) / 2;
+        const adjustment    = desiredTop - missieRect.top;
+        missieEl.style.marginTop = adjustment + 'px';
+      });
+    }
+  }
+
+  // Run na animatie + op resize
+  setTimeout(adjustHorizonCut, 1300);
+  window.addEventListener('resize', () => {
+    heroEarth_reset();
+    setTimeout(adjustHorizonCut, 50);
+  }, { passive: true });
+
+  function heroEarth_reset() {
+    const heroEarth = document.querySelector('.hero-earth');
+    if (heroEarth) {
+      heroEarth.style.marginTop = '-4rem';
+      heroEarth.style.paddingTop = 'calc(var(--s2) + 4rem)';
+    }
+    const missieEl = document.querySelector('.hero-missie');
+    if (missieEl) missieEl.style.marginTop = '0';
+    const ctaEl = document.querySelector('.hero-cta');
+    if (ctaEl) ctaEl.style.marginTop = '';
+  }
+
+  // Dev scrubber toggle: Shift+T
+  document.addEventListener('keydown', (e) => {
+    if (e.shiftKey && e.key === 'T') {
+      const p = document.getElementById('timeScrubberPanel');
+      if (p) p.style.setProperty('display', p.style.display === 'flex' ? 'none' : 'flex', 'important');
+    }
+  });
 
   // Nav hide on scroll down, show on scroll up
   const nav = document.getElementById('nav');
